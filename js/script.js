@@ -65,7 +65,7 @@ function updateProfileImage() {
     const img = document.getElementById('profile-img');
     if (!img) return;
     const isDark = document.body.classList.contains('dark');
-    img.src = isDark ? 'images/MyProfile3.png' : 'images/MyProfile3Light.png';
+    img.src = isDark ? 'images/AbdulSamadpr.png' : 'images/AbdulSamadprLight.png';
 }
 // Run on load
 updateProfileImage();
