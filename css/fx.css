@@ -1,0 +1,45 @@
+/* ==========================================================================
+   MOTION & BACKGROUND EFFECTS (layered depth, all transform/opacity driven)
+   ========================================================================== */
+/* layer 1: slowly rotating colour mesh; layer 2: drifting blobs (main.css); layer 3: grid; layer 4: particles */
+.mesh { position: absolute; left: 50%; top: 50%; width: 120vmax; height: 120vmax; margin: -60vmax 0 0 -60vmax; border-radius: 50%; opacity: calc(var(--blob-opacity) * .45); filter: blur(110px);
+  background: conic-gradient(from 0deg, var(--accent), transparent 22%, var(--accent-2) 45%, transparent 68%, var(--accent) 90%, transparent);
+  animation: spin 90s linear infinite; will-change: transform; }
+.blob.b3 { background: var(--accent); left: 30vw; bottom: -22vmax; width: 38vmax; height: 38vmax; animation-duration: 38s; animation-delay: -14s; opacity: calc(var(--blob-opacity) * .7); }
+#fx-canvas { position: absolute; inset: 0; width: 100%; height: 100%; }
+.bg-fx::after { /* vignette keeps text areas calm */
+  content: ""; position: absolute; inset: 0; background: radial-gradient(ellipse at 50% 40%, transparent 40%, var(--bg) 100%); opacity: .55; }
+
+/* hero: photo reveal + parallax variables written by JS */
+.hero-frame .photo { clip-path: inset(0 0 100% 0 round 22px); animation: photoIn 1.2s .45s var(--ease) forwards; }
+.hero-frame .photo img { scale: 1.18; animation: photoZoom 1.6s .45s var(--ease) forwards; }
+@keyframes photoIn { to { clip-path: inset(0 0 0 0 round 22px); } }
+@keyframes photoZoom { to { scale: 1; } }
+[data-parallax] { translate: 0 var(--py, 0px); will-change: translate; }
+.float-chip { opacity: 0; animation: chipIn .8s var(--ease) forwards, floaty 7s ease-in-out infinite; animation-delay: calc(1s + var(--ci, 0) * .12s), calc(1.8s + var(--ci, 0) * .12s); }
+@keyframes chipIn { from { opacity: 0; scale: .8; } to { opacity: 1; scale: 1; } }
+
+
+/* section headings: eyebrow rule draws in */
+.eyebrow::before { transform-origin: left; transform: scaleX(0); transition: transform .9s .2s var(--ease); }
+.reveal.in .eyebrow::before, .eyebrow.in::before { transform: scaleX(1); }
+
+/* 3D tilt cards (transform is written via CSS variables, reveal uses `translate`, so they never collide) */
+[data-tilt] { --rx: 0deg; --ry: 0deg; --ty: 0px; transform: perspective(1000px) rotateX(var(--rx)) rotateY(var(--ry)) translateY(var(--ty)); transition: transform .25s ease-out, border-color .3s, box-shadow .4s; }
+[data-tilt]:hover { --ty: -6px; }
+[data-tilt].tilting { transition: transform .08s linear, border-color .3s, box-shadow .4s; }
+.proj-card:hover .chip { translate: 0 -2px; }
+.proj-card .chip { transition: translate .35s var(--ease), border-color .2s; }
+.proj-card .chip:nth-child(2) { transition-delay: 40ms; } .proj-card .chip:nth-child(3) { transition-delay: 80ms; } .proj-card .chip:nth-child(4) { transition-delay: 120ms; }
+
+/* subtle sheen sweeping over featured cards */
+.proj-card.featured::before { content: ""; position: absolute; inset: 0; background: linear-gradient(105deg, transparent 35%, color-mix(in srgb, var(--accent) 14%, transparent) 50%, transparent 65%); translate: -120% 0; transition: translate .9s var(--ease); pointer-events: none; }
+.proj-card.featured:hover::before { translate: 120% 0; }
+
+@media (prefers-reduced-motion: reduce) {
+  .mesh, #fx-canvas { display: none; }
+  .hero-frame .photo { clip-path: none; animation: none; } .hero-frame .photo img { scale: 1; animation: none; }
+  .float-chip { opacity: 1; animation: none; }
+  [data-tilt], [data-tilt]:hover { transform: none; }
+  .eyebrow::before { transform: none; }
+}

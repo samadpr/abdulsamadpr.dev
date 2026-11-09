@@ -1,0 +1,29 @@
+/* ==========================================================================
+   TECHNOLOGY CURSOR
+   Enabled only by JS on (hover: hover) and (pointer: fine) without reduced motion.
+   Elements never receive pointer events; all motion is transform/opacity.
+   ========================================================================== */
+html.has-cursor, html.has-cursor * { cursor: none !important; }
+html.has-cursor input:not([type="checkbox"]):not([type="radio"]):not([type="submit"]),
+html.has-cursor textarea, html.has-cursor [contenteditable="true"] { cursor: text !important; }
+
+.cur { position: fixed; left: 0; top: 0; z-index: 2147483000; pointer-events: none; contain: layout style; will-change: transform; opacity: 0; transition: opacity .25s ease; }
+.cur.vis { opacity: 1; }
+html[data-cursor="text"] .cur, html[data-cursor="off"] .cur { opacity: 0; }
+
+.cur-dot { width: 0; height: 0; }
+.cur-dot i { position: absolute; left: -4px; top: -4px; width: 8px; height: 8px; border-radius: 50%; background: var(--gradient); box-shadow: 0 0 10px 1px var(--accent-line), 0 0 22px 2px color-mix(in srgb, var(--accent) 25%, transparent);
+  transition: transform .3s var(--ease); }
+.cur-ring { width: 0; height: 0; }
+.cur-ring i { position: absolute; left: -19px; top: -19px; width: 38px; height: 38px; border-radius: 50%; border: 1.5px solid color-mix(in srgb, var(--accent) 80%, transparent);
+  background: transparent; box-shadow: 0 0 14px -2px var(--accent-line), inset 0 0 12px -4px var(--accent-line);
+  transition: transform .45s var(--ease), background-color .3s, border-color .3s, box-shadow .3s, opacity .3s; }
+
+html[data-cursor="link"] .cur-ring i { transform: scale(1.45); background: var(--accent-soft); border-color: var(--accent); box-shadow: 0 0 22px 0 var(--accent-line); }
+html[data-cursor="link"] .cur-dot i { transform: scale(.6); }
+html[data-cursor="card"] .cur-ring i { transform: scale(2.1); background: color-mix(in srgb, var(--accent) 8%, transparent); border-color: var(--accent-line); box-shadow: 0 0 30px 0 var(--accent-line); }
+html[data-cursor="card"] .cur-dot i { transform: scale(1.4); }
+html[data-cursor="media"] .cur-ring i { transform: scale(1.9); border-style: dashed; background: transparent; }
+html[data-cursor="media"] .cur-dot i { transform: scale(.5); }
+html.cur-down .cur-ring i { transform: scale(.78) !important; transition-duration: .15s; }
+html.cur-down .cur-dot i { transform: scale(1.6); }

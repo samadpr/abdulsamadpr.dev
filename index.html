@@ -1,1018 +1,586 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="js-off" data-theme="dark" data-accent="blue" data-mode="system">
 
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Abdul Samad PR | Full Stack .NET Developer</title>
+    <title>Samadpr | Software Engineer</title>
 
-    <meta name="google-site-verification" content="xjdYmtGHZqi5SwQHXeO587AevrkRBufVSj9SsSH9vv4" />
-    <!-- Primary SEO -->
-    <meta name="title" content="Abdul Samad PR | Full Stack .NET Developer">
-    <meta name="description"
-        content="Portfolio of Abdul Samad PR, Full Stack .NET Developer specializing in ASP.NET Core, Angular, Flutter, SQL Server, Enterprise Asset Management Systems, IoT integrations, and scalable web applications.">
+    <!-- Apply saved theme BEFORE first paint (prevents wrong-theme flash) -->
+    <script>
+        (function () {
+            var r = document.documentElement;
+            try {
+                var m = localStorage.getItem('sp-mode') || 'system';
+                var a = localStorage.getItem('sp-accent') || 'blue';
+                var dark = m === 'dark' || (m === 'system' && window.matchMedia('(prefers-color-scheme: dark)').matches);
+                r.dataset.mode = m; r.dataset.accent = a; r.dataset.theme = dark ? 'dark' : 'light';
+            } catch (e) { /* storage blocked: keep defaults */ }
+            r.classList.remove('js-off');
+        })();
+    </script>
 
-    <meta name="keywords"
-        content="Abdul Samad, Abdul Samad PR, Full Stack Developer, ASP.NET Core Developer, Angular Developer, Flutter Developer, .NET Developer, SQL Server, Portfolio, Software Engineer, Enterprise Asset Management">
-
-    <meta name="author" content="Abdul Samad PR">
-    <meta name="robots" content="index, follow">
-    <meta name="language" content="English">
-
-    <meta name="creator" content="Abdul Samad PR">
-    <meta name="publisher" content="Abdul Samad PR">
-    <meta name="application-name" content="Abdul Samad Portfolio">
-
-    <meta property="profile:first_name" content="Abdul">
-    <meta property="profile:last_name" content="Samad">
-
-    <!-- Canonical URL -->
+    <meta name="description" content="Portfolio of Abdul Samad P R, a Software Engineer building scalable enterprise applications with ASP.NET Core and Angular, cross-platform apps with Flutter, and AI-powered systems with Azure AI Foundry and RAG.">
+    <meta name="keywords" content="Abdul Samad P R, Software Engineer, .NET Developer, ASP.NET Core, Angular, Flutter, Azure AI Foundry, RAG, SQL Server, Kerala, CodeSam">
+    <meta name="author" content="Abdul Samad P R">
+    <meta name="robots" content="index, follow, max-image-preview:large">
+    <meta name="google-site-verification" content="xjdYmtGHZqi5SwQHXeO587AevrkRBufVSj9SsSH9vv4">
     <link rel="canonical" href="https://samadpr.github.io/abdulsamadpr.dev/">
+    <meta name="theme-color" content="#070d1a" media="(prefers-color-scheme: dark)">
+    <meta name="theme-color" content="#f5f8fe" media="(prefers-color-scheme: light)">
 
-    <!-- Favicon -->
-    <link rel="icon" type="image/png" sizes="32x32" href="./images/AS-logo.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="./images/AS-logo.png">
-    <link rel="apple-touch-icon" href="./images/AS-logo.png">
+    <!-- Brand icons: SVG for modern browsers, ICO/PNG fallbacks, 180px Apple icon, web manifest -->
+    <link rel="icon" href="favicon.svg" type="image/svg+xml" sizes="any">
+    <link rel="icon" href="favicon.ico" sizes="48x48">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="48x48" href="favicon-48x48.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+    <link rel="manifest" href="site.webmanifest">
+    <meta name="application-name" content="Samadpr">
+    <meta name="apple-mobile-web-app-title" content="Samadpr">
 
-    <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://samadpr.github.io/abdulsamadpr.dev/">
-    <meta property="og:title" content="Abdul Samad PR | Full Stack .NET Developer">
-    <meta property="og:description"
-        content="Full Stack .NET Developer specializing in ASP.NET Core, Angular, Flutter, SQL Server, Enterprise Asset Management Systems, and IoT integrations.">
-    <meta property="og:image" content="https://samadpr.github.io/abdulsamadpr.dev/images/OgImg.png">
+    <meta property="og:title" content="Samadpr | Software Engineer">
+    <meta property="og:description" content="Building scalable software, intelligent systems and real-world solutions with ASP.NET Core, Angular, Flutter and Azure AI.">
+    <meta property="og:image" content="https://samadpr.github.io/abdulsamadpr.dev/images/og-image.png">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
-    <meta property="og:image:alt" content="Abdul Samad PR - Full Stack .NET Developer">
-    <meta property="og:site_name" content="Abdul Samad Portfolio">
-
-    <!-- Twitter -->
+    <meta property="og:image:alt" content="Samadpr – AS monogram and the title Software Engineer">
+    <meta property="og:site_name" content="Samadpr">
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Abdul Samad PR | Full Stack .NET Developer">
-    <meta name="twitter:description"
-        content="Portfolio of Abdul Samad PR - Full Stack .NET Developer specializing in enterprise applications, ASP.NET Core, Angular, Flutter, and IoT solutions.">
-    <meta name="twitter:image" content="https://samadpr.github.io/abdulsamadpr.dev/images/OgImg.png">
-    <meta name="twitter:image:alt" content="Abdul Samad PR - Full Stack .NET Developer">
+    <meta name="twitter:title" content="Samadpr | Software Engineer">
+    <meta name="twitter:description" content="Enterprise applications, cross-platform apps and AI-powered systems.">
+    <meta name="twitter:image" content="https://samadpr.github.io/abdulsamadpr.dev/images/og-image.png">
+    <meta name="twitter:image:alt" content="Samadpr – AS monogram and the title Software Engineer">
 
-    <!-- Theme Color -->
-    <meta name="theme-color" content="#0f172a">
-
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    <link
-        href="https://fonts.googleapis.com/css2?family=Clicker+Script&family=Poppins:wght@200;300;400;500;600;700&display=swap"
-        rel="stylesheet">
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/skins/color-1.css">
-    <link rel="stylesheet" href="css/style-switcher.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@500;700&family=Sora:wght@600;700&display=swap" rel="stylesheet">
+    <link rel="preload" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"></noscript>
+    <link rel="stylesheet" href="css/tokens.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/appearance.css">
+    <link rel="stylesheet" href="css/skills.css">
+    <link rel="stylesheet" href="css/experience.css">
+    <link rel="stylesheet" href="css/fx.css">
+    <link rel="stylesheet" href="css/brand.css">
+    <link rel="stylesheet" href="css/scroll.css">
+    <link rel="stylesheet" href="css/cursor.css">
 
     <script type="application/ld+json">
-{
-  "@context":"https://schema.org",
-  "@type":"Person",
-  "name":"Abdul Samad PR",
-  "url":"https://samadpr.github.io/abdulsamadpr.dev/",
-  "image":"https://samadpr.github.io/abdulsamadpr.dev/images/AbdulSamadpr.png",
-  "jobTitle":"Full Stack .NET Developer",
-  "email":"abdulsamadpr.dev@gmail.com",
-  "address":{
-    "@type":"PostalAddress",
-    "addressLocality":"Kochi",
-    "addressRegion":"Kerala",
-    "addressCountry":"India"
-  },
-  "sameAs":[
-    "https://github.com/samadpr",
-    "https://www.linkedin.com/in/abdulsamadpr"
-  ]
-}
-</script>
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Abdul Samad P R",
+      "alternateName": "Samadpr",
+      "url": "https://samadpr.github.io/abdulsamadpr.dev/",
+      "image": "https://samadpr.github.io/abdulsamadpr.dev/images/profile-light.jpg",
+      "jobTitle": "Software Engineer",
+      "worksFor": { "@type": "Organization", "name": "Infome Technologies LLC" },
+      "alumniOf": { "@type": "CollegeOrUniversity", "name": "Indira Gandhi National Open University" },
+      "email": "mailto:abdulsamadpr.dev@gmail.com",
+      "address": { "@type": "PostalAddress", "addressRegion": "Kerala", "addressCountry": "IN" },
+      "knowsAbout": ["ASP.NET Core", "Angular", "Flutter", "SQL Server", "Azure AI Foundry", "Retrieval-Augmented Generation", "Multi-tenant SaaS", "RFID integration"],
+      "sameAs": [
+        "https://www.linkedin.com/in/abdulsamadpr/",
+        "https://github.com/samadpr",
+        "https://www.instagram.com/code__sam",
+        "https://youtube.com/@codesam333"
+      ]
+    }
+    </script>
 </head>
 
 <body>
-    <!-- ====== Main Container ====== -->
-    <div class="main-container">
+    <a class="skip-link" href="#main">Skip to content</a>
+    <div class="loader" id="loader" aria-hidden="true"><img class="loader-logo" src="images/brand/as-logo.svg" alt="" width="72" height="72"></div>
+    <div class="progress-bar" id="progress" aria-hidden="true"></div>
+    <div class="bg-fx" aria-hidden="true"><div class="mesh"></div><div class="blob b1"></div><div class="blob b2"></div><div class="blob b3"></div><canvas id="fx-canvas"></canvas></div>
 
-        <!-- ASIDE -->
-        <div class="aside">
-            <div class="logo"><a href="#"><span>S</span>amad</a></div>
-            <div class="nav-toggler"><span></span></div>
-            <ul class="nav">
-                <li><a href="#home" class="active"><i class="fa fa-home"></i>Home</a></li>
-                <li><a href="#about"><i class="fa fa-user"></i>About</a></li>
-                <li><a href="#services"><i class="fa fa-list"></i>Services</a></li>
-                <li><a href="#portfolio"><i class="fa fa-briefcase"></i>Portfolio</a></li>
-                <li><a href="#contact"><i class="fa fa-comments"></i>Contact</a></li>
-            </ul>
+    <!-- ============ NAVIGATION ============ -->
+    <header class="nav" id="nav">
+        <div class="container">
+            <a class="brand" href="#home" aria-label="Samadpr, Software Engineer – back to top">
+                <img class="brand-mark" src="images/brand/as-logo.svg" alt="" width="36" height="36">
+                <span class="brand-word" aria-hidden="true">Samadpr<b>.</b></span>
+            </a>
+            <nav class="nav-links" id="nav-links" aria-label="Primary">
+                <a href="#home">Home</a>
+                <a href="#about">About</a>
+                <a href="#expertise">Expertise</a>
+                <a href="#experience">Experience</a>
+                <a href="#projects">Projects</a>
+                <a href="#ai">AI</a>
+                <a href="#achievements">Achievements</a>
+                <a href="#codesam">CodeSam</a>
+                <a href="#contact">Contact</a>
+            </nav>
+            <div class="nav-tools">
+                <button class="icon-btn" id="theme-btn" aria-label="Appearance settings" aria-haspopup="dialog" aria-expanded="false" aria-controls="ap"><i class="fa-solid fa-palette"></i></button>
+                <button class="icon-btn menu-toggle" id="menu-btn" aria-label="Open menu" aria-expanded="false" aria-controls="nav-links"><span class="bars"><i></i><i></i><i></i></span></button>
+            </div>
         </div>
+    </header>
 
-        <div class="main-content">
+    <main id="main">
 
-            <!-- HOME -->
-            <section class="home active section" id="home">
-                <div class="container">
-                    <div class="row">
-                        <div class="home-info padd-15">
-                            <h1 class="hello">Hello, I'm <span class="name">Abdul Samad P R</span></h1>
-                            <h3 class="my-profession">I'm a <span class="typing"></span></h3>
-                            <p>
-                                Full Stack .NET Developer with 2+ years of hands on experience building enterprise grade
-                                web applications, scalable REST APIs, cross platform mobile apps, cloud-native solutions,
-                                CI/CD pipelines, and IoT-integrated systems. Specialized in
-                                <strong style="color:var(--skin-color)">ASP.NET Core, Angular, Flutter, Azure, and DevOps</strong>
-                                 delivering real-world solutions used at global scale events and enterprise organizations.
-                            </p>
-                            <div class="home-stats">
-                                <div class="stat-item">
-                                    <div class="stat-num">2+</div>
-                                    <div class="stat-label">Years Exp</div>
-                                </div>
-                                <div class="stat-item">
-                                    <div class="stat-num">10+</div>
-                                    <div class="stat-label">Projects</div>
-                                </div>
-                                <div class="stat-item">
-                                    <div class="stat-num">3</div>
-                                    <div class="stat-label">Certifications</div>
-                                </div>
-                                <div class="stat-item">
-                                    <div class="stat-num">&#8734;</div>
-                                    <div class="stat-label">Growth</div>
-                                </div>
-                            </div>
-                            <div class="home-tags">
-                                <span class="home-tag">ASP.NET Core</span><span class="home-tag">Angular</span>
-                                <span class="home-tag">Flutter</span><span class="home-tag">Azure AI</span><span class="home-tag">DevOps</span>
-                                <span class="home-tag">SQL Server</span><span class="home-tag">RFID / IoT</span>
-                            </div>
-                            <a href="doc/Abdul Samad PR - Resume.pdf" download class="btn">Download CV</a>
-                        </div>
-                        <div class="home-img padd-15">
-                            <img src="images/AbdulSamadprLight.png" alt="Abdul Samad" id="profile-img">
+        <!-- ============ HOME ============ -->
+        <section class="hero" id="home">
+            <div class="container">
+                <div class="hero-copy">
+                    <div class="badge-live fade-in" style="--d:0"><span class="dot"></span>Software Engineer · Kerala, India · Open to freelance</div>
+                    <h1 aria-label="Building Scalable Software. Intelligent Systems. Real-World Solutions.">
+                        <span class="line" aria-hidden="true"><span style="--l:0">Building Scalable</span></span>
+                        <span class="line" aria-hidden="true"><span style="--l:1">Software.</span></span>
+                        <span class="line" aria-hidden="true"><span style="--l:2"><em class="grad-text" style="font-style:normal">Intelligent Systems.</em></span></span>
+                        <span class="line" aria-hidden="true"><span style="--l:3">Real&#8209;World Solutions.</span></span>
+                    </h1>
+                    <p class="hero-lead fade-in" style="--d:2">I'm <strong>Abdul Samad P R</strong>, a Software Engineer passionate about building enterprise applications, modern digital experiences, and AI-powered solutions.</p>
+                    <div class="hero-cta fade-in" style="--d:3">
+                        <a class="btn btn-primary magnetic" href="#projects">View My Projects <i class="fa-solid fa-arrow-right"></i></a>
+                        <a class="btn magnetic" href="doc/Abdul-Samad-PR-Resume.pdf" download><i class="fa-solid fa-file-arrow-down"></i>Download Resume</a>
+                        <a class="btn magnetic" href="#contact">Let's Connect</a>
+                    </div>
+                    <div class="hero-meta fade-in" style="--d:4">
+                        <span><i class="fa-solid fa-briefcase"></i>.NET Software Engineer, Infome Technologies LLC</span>
+                        <span><i class="fa-solid fa-graduation-cap"></i>BCA, IGNOU</span>
+                    </div>
+                </div>
+                <div class="hero-visual fade-in" style="--d:2" data-parallax="0.05">
+                    <span class="float-chip fc1" style="--ci:0" data-parallax="0.11"><i class="fa-solid fa-code"></i>ASP.NET Core</span>
+                    <span class="float-chip fc2" style="--ci:1" data-parallax="-0.04"><i class="fa-brands fa-angular"></i>Angular</span>
+                    <span class="float-chip fc3" style="--ci:2" data-parallax="0.07"><i class="fa-solid fa-brain"></i>Azure AI</span>
+                    <span class="float-chip fc4" style="--ci:3" data-parallax="-0.09"><i class="fa-solid fa-mobile-screen"></i>Flutter</span>
+                    <div class="hero-frame" id="hero-frame">
+                        <div class="photo">
+                            <picture class="img-dark"><source srcset="images/profile-dark.webp" type="image/webp"><img src="images/profile-dark.jpg" alt="Abdul Samad P R in a modern engineering office with code, analytics and cloud architecture screens" width="900" height="1200" fetchpriority="high"></picture>
+                            <picture class="img-light"><source srcset="images/profile-light.webp" type="image/webp"><img src="images/profile-light.jpg" alt="Abdul Samad P R in a bright engineering office with code, analytics and cloud architecture screens" width="900" height="1200" loading="lazy"></picture>
                         </div>
                     </div>
                 </div>
-            </section>
+            </div>
+            <span class="scroll-hint" aria-hidden="true"></span>
+        </section>
 
-            <!-- ABOUT -->
-            <section class="about section" id="about">
-                <div class="container">
-                    <div class="row">
-                        <div class="section-title padd-15">
-                            <h2>About Me</h2>
+        <!-- ============ ABOUT ============ -->
+        <section id="about">
+            <div class="container">
+                <div class="section-head reveal">
+                    <span class="eyebrow">About</span>
+                    <h2>Turning complex requirements into reliable software.</h2>
+                </div>
+                <div class="about-grid">
+                    <div class="about-copy reveal">
+                        <p>I am a Software Engineer focused on building scalable web applications, enterprise software solutions, cross-platform applications, and intelligent AI-powered systems.</p>
+                        <p>My experience spans backend engineering, frontend development, database architecture, cloud infrastructure, DevOps and AI integrations. I enjoy transforming complex business requirements into reliable, maintainable and user-friendly software.</p>
+                        <ul class="focus-list">
+                            <li><i class="fa-solid fa-server"></i><span><b>Backend &amp; APIs</b> – ASP.NET Core, Clean Architecture, JWT and role-based access control.</span></li>
+                            <li><i class="fa-solid fa-layer-group"></i><span><b>Enterprise SaaS</b> – multi-tenant platforms, Angular dashboards and SQL Server design.</span></li>
+                            <li><i class="fa-solid fa-brain"></i><span><b>AI integration</b> – Azure AI Foundry, LLMs and RAG inside real products.</span></li>
+                            <li><i class="fa-solid fa-microchip"></i><span><b>Hardware &amp; mobile</b> – Flutter apps and RFID / QR integrations deployed at live events.</span></li>
+                        </ul>
+                    </div>
+                    <aside class="facts glass reveal" style="--i:2" aria-label="Quick facts">
+                        <div class="fact"><span class="ic"><i class="fa-solid fa-briefcase"></i></span><div><small>Currently</small><b>.NET Software Engineer</b><br>Infome Technologies LLC</div></div>
+                        <div class="fact"><span class="ic"><i class="fa-solid fa-location-dot"></i></span><div><small>Based in</small><b>Kerala, India</b></div></div>
+                        <div class="fact"><span class="ic"><i class="fa-solid fa-graduation-cap"></i></span><div><small>Education</small><b>Bachelor of Computer Applications</b><br>IGNOU</div></div>
+                        <div class="fact"><span class="ic"><i class="fa-solid fa-handshake"></i></span><div><small>Availability</small><b>Open to freelance work</b></div></div>
+                    </aside>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============ EXPERTISE ============ -->
+        <section id="expertise">
+            <div class="container" id="skills-app">
+                <div class="section-head reveal">
+                    <span class="eyebrow">Technical Expertise</span>
+                    <h2>The Toolkit Behind the Work</h2>
+                    <p>Technologies, tools, and engineering practices I use to build scalable applications and intelligent digital solutions.</p>
+                </div>
+
+                <div class="sk-controls reveal">
+                    <div class="sk-row">
+                        <div class="sk-tools" id="sk-searchwrap">
+                            <div class="sk-search">
+                                <i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i>
+                                <label class="sr-only" for="sk-q">Search skills</label>
+                                <input id="sk-q" type="search" placeholder="Search skills…" autocomplete="off" spellcheck="false" enterkeyhint="search">
+                                <button class="sk-clear" id="sk-clear" type="button" aria-label="Clear search"><i class="fa-solid fa-xmark"></i></button>
+                            </div>
+                            <span class="sk-meta" id="sk-meta" role="status" aria-live="polite"></span>
+                            <span class="sk-legend" title="Core stack"><i aria-hidden="true"></i>Core stack</span>
+                        </div>
+                        <div class="view-toggle" role="group" aria-label="Skills view">
+                            <button type="button" data-view="grid" aria-pressed="true"><i class="fa-solid fa-table-cells-large"></i>Grid</button>
+                            <button type="button" data-view="eco" aria-pressed="false"><i class="fa-solid fa-diagram-project"></i>Ecosystem</button>
                         </div>
                     </div>
-                    <div class="row">
-                        <div class="about-content padd-15">
-                            <div class="row">
-                                <div class="about-text padd-15">
-                                    <h3>I'm Abdul Samad &amp; I'm a <span>Full Stack .NET Developer</span></h3>
-                                    <p>A passionate developer from Kerala, India, currently working as a .NET Software
-                                        Engineer at Infome Technologies LLC, Kochi. I specialize in building scalable
-                                        enterprise systems with ASP.NET Core, Angular, and Flutter. I've shipped
-                                        real-world solutions deployed at global events in Saudi Arabia, and built
-                                        AI-powered enterprise assistants using Azure AI and LLMs. I thrive in Agile
-                                        environments, love clean architecture, and am always pushing toward the next
-                                        challenge.</p>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="personal-info padd-15">
-                                    <div class="row">
-                                        <div class="info-item padd-15">
-                                            <p>Birthday : <span>19 Nov 2003</span></p>
-                                        </div>
-                                        <div class="info-item padd-15">
-                                            <p>Age : <span>22</span></p>
-                                        </div>
-                                        <div class="info-item padd-15">
-                                            <p>Website : <span><a href="https://samadpr.github.io/abdulsamadpr.dev/"
-                                                        target="_blank" class="info-link">samadpr.github.io</a></span>
-                                            </p>
-                                        </div>
-                                        <div class="info-item padd-15">
-                                            <p>Email : <span><a href="mailto:abdulsamadpr.dev@gmail.com"
-                                                        class="info-link">abdulsamadpr.dev@gmail.com</a></span></p>
-                                        </div>
-                                        <div class="info-item padd-15">
-                                            <p>Degree : <span>BCA (Pursuing)</span></p>
-                                        </div>
-                                        <div class="info-item padd-15">
-                                            <p>Phone : <span><a href="tel:+918139039704" class="info-link">+91
-                                                        8139039704</a></span></p>
-                                        </div>
-                                        <div class="info-item padd-15">
-                                            <p>City : <span><a href="https://maps.app.goo.gl/5pCWNQha7NbGD6iJ9"
-                                                        target="_blank" rel="noopener" class="info-link">Thrissur, Kerala
-                                                        &#x1F4CD;</a></span></p>
-                                        </div>
-                                        <div class="info-item padd-15">
-                                            <p>Freelance : <span>Available</span></p>
-                                        </div>
-                                    </div>
-                                    <div class="row">
-                                        <div class="buttons padd-15"><a href="#contact" data-section-index="1"
-                                                class="btn hire-me">Hire Me</a></div>
-                                    </div>
-                                </div>
-                                <div class="skills padd-15">
-                                    <div class="row">
-                                        <div class="skill-item padd-15">
-                                            <h5>C# / .NET</h5>
-                                            <div class="progress">
-                                                <div class="progress-in" style="width:0" data-width="95%"></div>
-                                                <div class="skill-percent">95%</div>
-                                            </div>
-                                        </div>
-                                        <div class="skill-item padd-15">
-                                            <h5>ASP.NET Core</h5>
-                                            <div class="progress">
-                                                <div class="progress-in" style="width:0" data-width="90%"></div>
-                                                <div class="skill-percent">90%</div>
-                                            </div>
-                                        </div>
-                                        <div class="skill-item padd-15">
-                                            <h5>Angular</h5>
-                                            <div class="progress">
-                                                <div class="progress-in" style="width:0" data-width="80%"></div>
-                                                <div class="skill-percent">80%</div>
-                                            </div>
-                                        </div>
-                                        <div class="skill-item padd-15">
-                                            <h5>SQL Server</h5>
-                                            <div class="progress">
-                                                <div class="progress-in" style="width:0" data-width="82%"></div>
-                                                <div class="skill-percent">82%</div>
-                                            </div>
-                                        </div>
-                                        <div class="skill-item padd-15">
-                                            <h5>Azure & DevOps</h5>
-                                            <div class="progress">
-                                                <div class="progress-in" style="width:0" data-width="79%"></div>
-                                                <div class="skill-percent">79%</div>
-                                            </div>
-                                        </div>
-                                        <div class="skill-item padd-15">
-                                            <h5>Flutter / Dart</h5>
-                                            <div class="progress">
-                                                <div class="progress-in" style="width:0" data-width="75%"></div>
-                                                <div class="skill-percent">75%</div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- Carousel -->
-                            <div class="row">
-                                <div class="exp-edu-section padd-15">
-                                    <div class="exp-edu-tabs">
-                                        <button class="exp-tab-btn active" data-tab="experience"><i
-                                                class="fa fa-briefcase" style="margin-right:8px"></i>Experience</button>
-                                        <button class="exp-tab-btn" data-tab="education"><i class="fa fa-graduation-cap"
-                                                style="margin-right:8px"></i>Education</button>
-                                    </div>
-                                    <div class="cards-carousel" id="exp-carousel">
-                                        <div class="cards-track" id="exp-track">
-                                            <div class="exp-card">
-                                                <div class="exp-card-header">
-                                                    <div class="exp-card-title">.NET Software Engineer</div>
-                                                    <div class="exp-card-date"><i class="fa fa-calendar"
-                                                            style="margin-right:5px"></i>Feb 2025 &ndash; Present</div>
-                                                </div>
-                                                <div class="exp-card-company">Infome Technologies LLC &middot; Kochi,
-                                                    India</div>
-                                                <ul>
-                                                    <li>Designed and developed secure REST APIs using ASP.NET Core for
-                                                        enterprise asset management &amp; AI-enabled platforms.</li>
-                                                    <li>Built cross-platform Flutter apps for large-scale event entry
-                                                        systems deployed in Saudi Arabia.</li>
-                                                    <li>Developed AI-powered features using Azure AI, LLMs, RAG, and
-                                                        prompt engineering.</li>
-                                                    <li>Integrated RFID devices, QR scanners, and IoT hardware with
-                                                        backend systems via .NET Worker Services.</li>
-                                                    <li>Implemented Clean Architecture and Service-Repository pattern
-                                                        for maintainable, modular code.</li>
-                                                    <li>Designed and optimized SQL Server structures, improving query
-                                                        performance by ~30%.</li>
-                                                </ul>
-                                                <div class="exp-card-tags"><span class="exp-tag">ASP.NET
-                                                        Core</span><span class="exp-tag">Angular</span><span
-                                                        class="exp-tag">Flutter</span><span class="exp-tag">Azure
-                                                        AI</span><span class="exp-tag">RFID</span><span
-                                                        class="exp-tag">SQL Server</span></div>
-                                            </div>
-                                            <div class="exp-card">
-                                                <div class="exp-card-header">
-                                                    <div class="exp-card-title">ASP.NET Core Full Stack Developer</div>
-                                                    <div class="exp-card-date"><i class="fa fa-calendar"
-                                                            style="margin-right:5px"></i>Dec 2023 &ndash; 2025</div>
-                                                </div>
-                                                <div class="exp-card-company">Aitrich Technologies Pvt Ltd &middot;
-                                                    Thrissur, India</div>
-                                                <ul>
-                                                    <li>Developed and contributed to a Job Portal Application end-to-end
-                                                        during internship.</li>
-                                                    <li>Worked across all SDLC phases: requirement gathering, design,
-                                                        development, testing, and deployment.</li>
-                                                    <li>Integrated RFID detection devices with InfoBookz Library
-                                                        Management System via secure backend APIs.</li>
-                                                    <li>Implemented automated alarm systems for unauthorized book
-                                                        movement detection.</li>
-                                                    <li>Participated in Agile sprints, daily stand-ups, and code reviews
-                                                        on Git repositories.</li>
-                                                </ul>
-                                                <div class="exp-card-tags"><span class="exp-tag">.NET Core</span><span
-                                                        class="exp-tag">C#</span><span class="exp-tag">SQL</span><span
-                                                        class="exp-tag">RFID</span><span
-                                                        class="exp-tag">Flutter</span><span class="exp-tag">Agile</span>
-                                                </div>
-                                            </div>
-                                            <div class="exp-card">
-                                                <div class="exp-card-header">
-                                                    <div class="exp-card-title">ASP.NET Core Full Stack Developer</div>
-                                                    <div class="exp-card-date"><i class="fa fa-calendar"
-                                                            style="margin-right:5px"></i>Nov 2024 &ndash; 2025</div>
-                                                </div>
-                                                <div class="exp-card-company">Freelance Projects &middot; Saudi Arabia
-                                                    (Remote)</div>
-                                                <ul>
-                                                    <li>Developed custom web applications using ASP.NET Core for
-                                                        Saudi-based clients.</li>
-                                                    <li>Built and deployed APIs for secure, efficient front-end to
-                                                        back-end data transfer.</li>
-                                                    <li>Designed PDF Report Generators using FastReport Community
-                                                        Edition.</li>
-                                                    <li>Configured and managed IIS servers for ASP.NET Core application
-                                                        hosting.</li>
-                                                    <li>Worked with MySQL to design schemas, optimize queries, and
-                                                        manage datasets.</li>
-                                                </ul>
-                                                <div class="exp-card-tags"><span class="exp-tag">ASP.NET
-                                                        Core</span><span class="exp-tag">MySQL</span><span
-                                                        class="exp-tag">IIS</span><span
-                                                        class="exp-tag">FastReport</span><span
-                                                        class="exp-tag">Postman</span></div>
-                                            </div>
-                                            <div class="exp-card">
-                                                <div class="exp-card-header">
-                                                    <div class="exp-card-title">Frontend Developer</div>
-                                                    <div class="exp-card-date"><i class="fa fa-calendar"
-                                                            style="margin-right:5px"></i>2022 &ndash; 2023</div>
-                                                </div>
-                                                <div class="exp-card-company">Freelance &middot; Remote</div>
-                                                <ul>
-                                                    <li>Designed and developed the <em>Astralution Website</em> &mdash;
-                                                        showcasing AI-powered drone technology.</li>
-                                                    <li>Created a responsive, visually engaging interface with seamless
-                                                        UX across all devices.</li>
-                                                    <li>Implemented content for services: technical inspection, crisis
-                                                        management, precision agriculture.</li>
-                                                    <li>Optimized for accessibility and performance with fast load
-                                                        times.</li>
-                                                </ul>
-                                                <div class="exp-card-tags"><span class="exp-tag">HTML</span><span
-                                                        class="exp-tag">CSS</span><span
-                                                        class="exp-tag">JavaScript</span><span
-                                                        class="exp-tag">Responsive Design</span><span
-                                                        class="exp-tag">UI/UX</span></div>
-                                            </div>
-                                        </div>
-                                        <div class="carousel-nav">
-                                            <button class="carousel-btn" id="exp-prev"><i
-                                                    class="fa fa-chevron-left"></i></button>
-                                            <div class="carousel-dots" id="exp-dots"></div>
-                                            <button class="carousel-btn" id="exp-next"><i
-                                                    class="fa fa-chevron-right"></i></button>
-                                        </div>
-                                    </div>
-                                    <div class="cards-carousel" id="edu-carousel" style="display:none">
-                                        <div class="cards-track" id="edu-track">
-                                            <div class="exp-card">
-                                                <div class="exp-card-header">
-                                                    <div class="exp-card-title">Bachelor of Computer Applications (BCA)
-                                                    </div>
-                                                    <div class="exp-card-date"><i class="fa fa-calendar"
-                                                            style="margin-right:5px"></i>Jul 2023 &ndash; Pursuing</div>
-                                                </div>
-                                                <div class="exp-card-company">Indira Gandhi National Open University
-                                                    (IGNOU)</div>
-                                                <div class="exp-card-degree">Undergraduate Degree &middot; Computer
-                                                    Science</div>
-                                                <ul>
-                                                    <li>Studying fundamentals of computer science, software development,
-                                                        and web technologies.</li>
-                                                    <li>Curriculum includes programming languages, networking,
-                                                        databases, and full-stack development.</li>
-                                                    <li>Preparing for a comprehensive career in IT and software
-                                                        development.</li>
-                                                </ul>
-                                                <div class="exp-card-tags"><span class="exp-tag">Computer
-                                                        Science</span><span class="exp-tag">Software
-                                                        Engineering</span><span class="exp-tag">Databases</span><span
-                                                        class="exp-tag">Networking</span></div>
-                                            </div>
-                                            <div class="exp-card">
-                                                <div class="exp-card-header">
-                                                    <div class="exp-card-title">ASP.NET Core Full-Stack Web Development
-                                                    </div>
-                                                    <div class="exp-card-date"><i class="fa fa-calendar"
-                                                            style="margin-right:5px"></i>Dec 2023 &ndash; 2025</div>
-                                                </div>
-                                                <div class="exp-card-company">Aitrich Technologies &middot; Thrissur,
-                                                    India</div>
-                                                <div class="exp-card-degree">Professional Training Program</div>
-                                                <ul>
-                                                    <li>Comprehensive full-stack training covering ASP.NET Core,
-                                                        Angular, and modern web development.</li>
-                                                    <li>Hands-on project work: Job Portal Application, RFID
-                                                        integrations, mobile app development.</li>
-                                                    <li>Agile methodology, SDLC, Git workflows, and software
-                                                        architecture principles.</li>
-                                                </ul>
-                                                <div class="exp-card-tags"><span class="exp-tag">ASP.NET
-                                                        Core</span><span class="exp-tag">Angular</span><span
-                                                        class="exp-tag">Flutter</span><span class="exp-tag">SQL
-                                                        Server</span></div>
-                                            </div>
-                                            <div class="exp-card">
-                                                <div class="exp-card-header">
-                                                    <div class="exp-card-title">AI Agents Intensive Course</div>
-                                                    <div class="exp-card-date"><i class="fa fa-calendar"
-                                                            style="margin-right:5px"></i>2026</div>
-                                                </div>
-                                                <div class="exp-card-company">Google &middot; Kaggle Learn</div>
-                                                <div class="exp-card-degree">Certification &middot; Artificial
-                                                    Intelligence</div>
-                                                <ul>
-                                                    <li>AI agent architectures, Gemini-based agent development, and tool
-                                                        integration.</li>
-                                                    <li>Multi-agent system design and orchestration.</li>
-                                                    <li>Practical AI workflow automation and LLM integration.</li>
-                                                </ul>
-                                                <div class="exp-card-tags"><span class="exp-tag">AI Agents</span><span
-                                                        class="exp-tag">Gemini</span><span
-                                                        class="exp-tag">LLMs</span><span class="exp-tag">Multi-Agent
-                                                        Systems</span></div>
-                                                <a href="https://www.kaggle.com/certification/badges/abdulsamadpr/105"
-                                                    target="_blank" rel="noopener" class="cert-link-btn"><i
-                                                        class="fab fa-kaggle"></i> View Certificate on Kaggle</a>
-                                            </div>
-                                        </div>
-                                        <div class="carousel-nav">
-                                            <button class="carousel-btn" id="edu-prev"><i
-                                                    class="fa fa-chevron-left"></i></button>
-                                            <div class="carousel-dots" id="edu-dots"></div>
-                                            <button class="carousel-btn" id="edu-next"><i
-                                                    class="fa fa-chevron-right"></i></button>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+                    <div class="cat-scroll" id="sk-tabswrap">
+                        <div class="cat-tabs" id="cat-tabs" role="tablist" aria-label="Skill categories"><span class="cat-ind" id="cat-ind" aria-hidden="true"></span></div>
+                    </div>
+                </div>
+
+                <div id="sk-panel" role="tabpanel">
+                    <ul class="sk-grid" id="sk-grid"></ul>
+                    <div class="sk-empty" id="sk-empty">
+                        <div class="big"><i class="fa-solid fa-magnifying-glass"></i></div>
+                        <h3>No matching skills</h3>
+                        <p>Nothing matches “<span id="sk-empty-q"></span>”. Try a keyword like Angular, Azure or RAG.</p>
+                        <button class="btn" id="sk-reset" type="button">Clear filters</button>
+                    </div>
+                </div>
+                <div class="sk-more" id="sk-more">
+                    <button class="btn btn-primary" id="sk-more-btn" type="button" aria-expanded="false" aria-controls="sk-grid">
+                        <span id="sk-more-label">Explore All Skills</span>
+                        <span class="sk-more-count" id="sk-more-count"></span>
+                        <i id="sk-more-icon" class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+                    </button>
+                </div>
+                <div class="eco" id="eco" aria-label="Technology ecosystem"></div>
+                <noscript>
+                    <p>Languages: C#, JavaScript, TypeScript, Dart, Python, HTML, CSS / SCSS, JSON. Frameworks: ASP.NET Core, ASP.NET MVC, Blazor, Angular, Flutter, Bootstrap, jQuery, Chart.js. Databases: Microsoft SQL Server, MySQL, PostgreSQL, SQLite, MongoDB. AI &amp; Intelligent Systems: Azure AI Foundry, Google Gemini AI, LLMs, AI Assistant Development, RAG, Prompt Engineering, Contextual AI Systems, Enterprise AI Integration, Conversational AI, AI Powered Search, Semantic Search, Vector-Based Knowledge Retrieval, AI Workflow Automation. Cloud &amp; DevOps: Microsoft Azure (App Services, Storage, Monitoring), CI/CD Pipelines, Azure DevOps, Azure Repos, GitHub Actions, Docker, Environment Configuration, Secret Management. Tools &amp; Platforms: Git, GitHub, GitLab, RabbitMQ, Firebase, Visual Studio, VS Code, Android Studio, Eclipse, Postman, Swagger, Trello, NPM, Google DevTools. Design &amp; Prototyping: Figma, Photoshop, draw.io diagrams. Concepts &amp; Methodologies: MVC Architecture, RESTful APIs, IoT &amp; Device Integration, SDLC, Agile, System Analysis, Database Design &amp; Normalization, Version Control. Soft skills: Problem Solving, Time Management, Debugging &amp; Troubleshooting, Team Collaboration, Leadership, Growth Mindset.</p>
+                </noscript>
+
+                <div class="caps">
+                    <article class="cap reveal" style="--i:0" data-tilt><span class="num">01</span><span class="ic"><i class="fa-solid fa-shield-halved"></i></span><h3>Secure by Default</h3><p>JWT authentication, ASP.NET Identity, and role-based access control.</p></article>
+                    <article class="cap reveal" style="--i:1" data-tilt><span class="num">02</span><span class="ic"><i class="fa-solid fa-sitemap"></i></span><h3>Maintainable Architecture</h3><p>Clean Architecture, Service-Repository patterns, and modular application design.</p></article>
+                    <article class="cap reveal" style="--i:2" data-tilt><span class="num">03</span><span class="ic"><i class="fa-solid fa-gauge-high"></i></span><h3>Production Mindset</h3><p>Debugging, performance optimisation, and CI/CD-based delivery.</p></article>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============ EXPERIENCE ============ -->
+        <section id="experience">
+            <div class="container">
+                <div class="section-head reveal">
+                    <span class="eyebrow">Experience</span>
+                    <h2>Professional Experience</h2>
+                    <p>Building real-world software solutions, contributing to enterprise applications and continuously growing as an engineer.</p>
+                </div>
+
+                <div class="xp-summary" aria-label="Experience at a glance">
+                    <div class="xp-tile reveal" style="--i:0"><small>Current position</small><b>.NET Software Engineer</b><span>Infome Technologies LLC · Kochi, India</span></div>
+                    <div class="xp-tile reveal" style="--i:1"><small>Experience</small><b>2+ years</b><span>Enterprise web, REST APIs, mobile and IoT solutions</span></div>
+                    <div class="xp-tile reveal" style="--i:2"><small>Core engineering focus</small><b>ASP.NET Core · Angular · Flutter</b><span>SQL Server and Azure</span></div>
+                    <div class="xp-tile reveal" style="--i:3"><small>Domains</small><b>Asset management · RFID · AI</b><span>AI powered enterprise assistants and large scale event technology</span></div>
+                </div>
+
+                <div class="xp-intro reveal">
+                    <h3 class="xp-label">Professional summary</h3>
+                    <p id="xp-intro-text">Full Stack .NET Developer with 2+ years of experience building enterprise web applications, REST APIs, mobile applications, and IoT integrated solutions using ASP.NET Core, Angular, Flutter, SQL Server, and Azure.</p>
+                </div>
+
+                <ol class="xp-list" id="xp-list" aria-label="Career timeline, most recent first"></ol>
+
+                <div class="xp-edu">
+                    <h3 class="xp-edu-title reveal">Education &amp; Training</h3>
+                    <ul class="xp-edu-list" id="xp-edu-list"></ul>
+                </div>
+                <noscript>
+                    <p>.NET Software Engineer, Infome Technologies LLC, Kochi, India (February 2025 – Present). ASP.NET Core Full Stack Developer, Freelance Projects, Saudi Arabia (November 2024 – 2025). ASP.NET Core Full Stack Developer, Aitrich Technologies Pvt Ltd, Thrissur, India (December 2023 – 2025). Education: Bachelor of Computer Applications (July 2023 – 2026); ASP.NET Core Full-Stack Web Development, Aitrich Technologies (December 2023 – 2025).</p>
+                </noscript>
+            </div>
+        </section>
+
+        <!-- ============ PROJECTS ============ -->
+        <section id="projects">
+            <div class="container">
+                <div class="section-head reveal">
+                    <span class="eyebrow">Featured Projects</span>
+                    <h2>Real-world engineering, as case studies.</h2>
+                    <p>Open any project for the problem, the solution, my role, the architecture and the stack.</p>
+                </div>
+                <div class="filters reveal" role="group" aria-label="Filter projects">
+                    <button class="tab active" data-filter="all">All</button>
+                    <button class="tab" data-filter="enterprise">Enterprise</button>
+                    <button class="tab" data-filter="ai">AI</button>
+                    <button class="tab" data-filter="desktop">Desktop</button>
+                    <button class="tab" data-filter="mobile">Mobile</button>
+                    <button class="tab" data-filter="iot">IoT</button>
+                    <button class="tab" data-filter="web">Web</button>
+                </div>
+                <div class="proj-grid" id="proj-grid">
+                    <button data-tilt class="proj-card glass featured reveal" data-project="infoasset" data-cat="enterprise ai iot">
+                        <span class="proj-top"><span class="proj-ic"><i class="fa-solid fa-boxes-stacked"></i></span><span class="proj-kind">Enterprise SaaS</span></span>
+                        <h3>InfoAsset – Smart Asset Management System</h3>
+                        <p>Multi-tenant platform for registering, tracking and maintaining organisational assets across companies, sites and branches, with an AI assistant and RFID/GPS integrations.</p>
+                        <span class="chip-row"><span class="chip">ASP.NET Core</span><span class="chip">Angular</span><span class="chip">SQL Server</span><span class="chip">JWT · RBAC</span></span>
+                        <span class="proj-more">Read case study <i class="fa-solid fa-arrow-right"></i></span>
+                    </button>
+                    <button data-tilt class="proj-card glass featured reveal" style="--i:1" data-project="infoid" data-cat="desktop enterprise">
+                        <span class="proj-top"><span class="proj-ic"><i class="fa-solid fa-id-card"></i></span><span class="proj-kind">Desktop · Enterprise</span></span>
+                        <h3>InfoID – ID Card Designing &amp; Printing</h3>
+                        <p>Desktop software with a custom drag-and-drop card designer, multi-format printing and a layered .NET architecture. Built with Avalonia UI.</p>
+                        <span class="chip-row"><span class="chip">C# · .NET</span><span class="chip">Avalonia UI</span><span class="chip">ASP.NET Core</span><span class="chip">SQLite</span></span>
+                        <span class="proj-more">Read case study <i class="fa-solid fa-arrow-right"></i></span>
+                    </button>
+                    <button data-tilt class="proj-card glass reveal" data-project="assistant" data-cat="ai enterprise">
+                        <span class="proj-top"><span class="proj-ic"><i class="fa-solid fa-robot"></i></span><span class="proj-kind">AI · Enterprise</span></span>
+                        <h3>AI-Powered Enterprise Assistant</h3>
+                        <p>Azure AI Foundry assistant using RAG and semantic search to answer questions from live organisational data, with role-aware permissions.</p>
+                        <span class="chip-row"><span class="chip">Azure AI Foundry</span><span class="chip">RAG</span><span class="chip">LLMs</span></span>
+                        <span class="proj-more">Read case study <i class="fa-solid fa-arrow-right"></i></span>
+                    </button>
+                    <button data-tilt class="proj-card glass reveal" style="--i:1" data-project="agents" data-cat="ai">
+                        <span class="proj-top"><span class="proj-ic"><i class="fa-solid fa-diagram-project"></i></span><span class="proj-kind">AI · Exploration</span></span>
+                        <h3>AI Agent Development</h3>
+                        <p>Agent architecture: reasoning, tool selection and API/database execution. An honest map of what I've shipped and what I'm still exploring.</p>
+                        <span class="chip-row"><span class="chip">LLMs</span><span class="chip">Tool calling</span><span class="chip">Gemini</span></span>
+                        <span class="proj-more">Read case study <i class="fa-solid fa-arrow-right"></i></span>
+                    </button>
+                    <button data-tilt class="proj-card glass reveal" style="--i:2" data-project="events" data-cat="mobile iot">
+                        <span class="proj-top"><span class="proj-ic"><i class="fa-solid fa-qrcode"></i></span><span class="proj-kind">Mobile · Events</span></span>
+                        <h3>Event Check-In &amp; QR Scanning App</h3>
+                        <p>High-throughput Flutter app for attendee verification, used at Netflix events in Saudi Arabia.</p>
+                        <span class="chip-row"><span class="chip">Flutter</span><span class="chip">REST APIs</span><span class="chip">QR</span></span>
+                        <span class="proj-more">Read case study <i class="fa-solid fa-arrow-right"></i></span>
+                    </button>
+                    <button data-tilt class="proj-card glass reveal" data-project="fii" data-cat="mobile iot enterprise">
+                        <span class="proj-top"><span class="proj-ic"><i class="fa-solid fa-id-badge"></i></span><span class="proj-kind">IoT · Events</span></span>
+                        <h3>FII Guest Entry &amp; UHF RFID Monitoring</h3>
+                        <p>Multi-zone entry and UHF RFID gate monitoring deployed at the FII conference in Riyadh.</p>
+                        <span class="chip-row"><span class="chip">Flutter</span><span class="chip">UHF RFID</span><span class="chip">.NET MAUI Blazor</span></span>
+                        <span class="proj-more">Read case study <i class="fa-solid fa-arrow-right"></i></span>
+                    </button>
+                    <button data-tilt class="proj-card glass reveal" style="--i:1" data-project="rfid" data-cat="iot enterprise">
+                        <span class="proj-top"><span class="proj-ic"><i class="fa-solid fa-book"></i></span><span class="proj-kind">IoT · Library</span></span>
+                        <h3>RFID Anti-Theft – InfoBookz Library</h3>
+                        <p>Automated library theft prevention with real-time RFID checks and alarms.</p>
+                        <span class="chip-row"><span class="chip">.NET Core</span><span class="chip">RFID</span><span class="chip">C#</span></span>
+                        <span class="proj-more">Read case study <i class="fa-solid fa-arrow-right"></i></span>
+                    </button>
+                    <button data-tilt class="proj-card glass reveal" style="--i:2" data-project="invoice" data-cat="mobile">
+                        <span class="proj-top"><span class="proj-ic"><i class="fa-solid fa-file-invoice"></i></span><span class="proj-kind">Mobile · POS</span></span>
+                        <h3>Invoice Management &amp; PDF Generation</h3>
+                        <p>Flutter app (InfoPos) that creates invoices with automatic VAT calculation and PDF export.</p>
+                        <span class="chip-row"><span class="chip">Flutter</span><span class="chip">Dart</span><span class="chip">PDF</span></span>
+                        <span class="proj-more">Read case study <i class="fa-solid fa-arrow-right"></i></span>
+                    </button>
+                    <button data-tilt class="proj-card glass reveal" data-project="saudi" data-cat="enterprise web">
+                        <span class="proj-top"><span class="proj-ic"><i class="fa-solid fa-globe"></i></span><span class="proj-kind">Freelance</span></span>
+                        <h3>Custom Web Apps – Saudi Arabia</h3>
+                        <p>ASP.NET Core applications with PDF report generators and IIS-hosted deployments for Saudi clients.</p>
+                        <span class="chip-row"><span class="chip">ASP.NET Core</span><span class="chip">MySQL</span><span class="chip">FastReport</span></span>
+                        <span class="proj-more">Read case study <i class="fa-solid fa-arrow-right"></i></span>
+                    </button>
+                    <button data-tilt class="proj-card glass reveal" style="--i:1" data-project="jobportal" data-cat="enterprise web">
+                        <span class="proj-top"><span class="proj-ic"><i class="fa-solid fa-briefcase"></i></span><span class="proj-kind">Internship</span></span>
+                        <h3>Job Portal Application</h3>
+                        <p>Full-stack job portal built through the full SDLC during my Aitrich internship.</p>
+                        <span class="chip-row"><span class="chip">ASP.NET Core</span><span class="chip">Angular</span><span class="chip">SQL Server</span></span>
+                        <span class="proj-more">Read case study <i class="fa-solid fa-arrow-right"></i></span>
+                    </button>
+                    <button data-tilt class="proj-card glass reveal" style="--i:2" data-project="astralution" data-cat="web">
+                        <span class="proj-top"><span class="proj-ic"><i class="fa-solid fa-satellite-dish"></i></span><span class="proj-kind">Web · Freelance</span></span>
+                        <h3>Astralution – AI Drone Technology Website</h3>
+                        <p>Responsive corporate website for an AI-powered drone technology company.</p>
+                        <span class="chip-row"><span class="chip">HTML</span><span class="chip">CSS</span><span class="chip">JavaScript</span></span>
+                        <span class="proj-more">Read case study <i class="fa-solid fa-arrow-right"></i></span>
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============ AI & INTELLIGENT SYSTEMS ============ -->
+        <section id="ai">
+            <div class="container">
+                <div class="section-head reveal">
+                    <span class="eyebrow">AI &amp; Intelligent Systems</span>
+                    <h2>From a user request to a grounded result.</h2>
+                    <p>How an AI agent turns a request into action, and where my own experience sits in that flow. Select a stage.</p>
+                </div>
+                <div class="legend reveal">
+                    <span><span class="status impl">Implemented</span> built in a real project</span>
+                    <span><span class="status learn">Learning</span> studied / exploring, not claimed as production</span>
+                </div>
+                <div class="ai-wrap">
+                    <div class="pipeline glass reveal" id="pipeline" role="group" aria-label="Agent pipeline">
+                        <button class="pipe-step" data-step="0" aria-pressed="true"><span class="n">1</span><span><b>User Request</b><small>Natural language in</small></span></button>
+                        <div class="pipe-link" aria-hidden="true"></div>
+                        <button class="pipe-step" data-step="1" aria-pressed="false"><span class="n">2</span><span><b>AI Agent</b><small>LLM + context</small></span></button>
+                        <div class="pipe-link" aria-hidden="true"></div>
+                        <button class="pipe-step" data-step="2" aria-pressed="false"><span class="n">3</span><span><b>Reasoning &amp; Planning</b><small>Decide what to do</small></span></button>
+                        <div class="pipe-link" aria-hidden="true"></div>
+                        <button class="pipe-step" data-step="3" aria-pressed="false"><span class="n">4</span><span><b>Tool Selection</b><small>Pick the right function</small></span></button>
+                        <div class="pipe-link" aria-hidden="true"></div>
+                        <button class="pipe-step" data-step="4" aria-pressed="false"><span class="n">5</span><span><b>API / Database / Services</b><small>Execute against real data</small></span></button>
+                        <div class="pipe-link" aria-hidden="true"></div>
+                        <button class="pipe-step" data-step="5" aria-pressed="false"><span class="n">6</span><span><b>Result</b><small>Grounded answer or action</small></span></button>
+                    </div>
+                    <div class="ai-detail glass reveal" style="--i:2" id="ai-detail" aria-live="polite"></div>
+                </div>
+                <div class="ai-cards">
+                    <div class="mini glass reveal"><i class="fa-solid fa-robot"></i><h3>Shipped: enterprise assistant</h3><p>An Azure AI Foundry assistant with RAG, session history and permission-aware answers, integrated into InfoAsset.</p><button class="btn" data-project="assistant" style="margin-top:1rem">Read case study <i class="fa-solid fa-arrow-right"></i></button></div>
+                    <div class="mini glass reveal" style="--i:1"><i class="fa-solid fa-graduation-cap"></i><h3>Learning: AI agents</h3><p>Completed the Google × Kaggle “AI Agents Intensive” course on agent architectures, Gemini-based agents and multi-agent orchestration.</p><a class="btn" href="https://www.kaggle.com/certification/badges/abdulsamadpr/105" target="_blank" rel="noopener" style="margin-top:1rem">View certificate <i class="fa-solid fa-arrow-up-right-from-square"></i></a></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============ ACHIEVEMENTS & CERTIFICATIONS ============ -->
+        <section id="achievements">
+            <div class="container">
+                <div class="section-head reveal">
+                    <span class="eyebrow">Achievements &amp; Certifications</span>
+                    <h2>Milestones along the way.</h2>
+                </div>
+                <div class="ach-grid">
+                    <div class="ach-list">
+                        <div class="ach glass reveal"><span class="ic"><i class="fa-solid fa-building"></i></span><div><b>Enterprise software development</b><span>Contributing to enterprise applications at Infome Technologies LLC.</span></div></div>
+                        <div class="ach glass reveal" style="--i:1"><span class="ic"><i class="fa-solid fa-boxes-stacked"></i></span><div><b>InfoAsset production project</b><span>Backend, frontend integration and AI work on a multi-tenant SaaS platform.</span></div></div>
+                        <div class="ach glass reveal" style="--i:2"><span class="ic"><i class="fa-solid fa-id-card"></i></span><div><b>InfoID desktop application</b><span>Cross-layer desktop software built with Avalonia UI and ASP.NET Core.</span></div></div>
+                        <div class="ach glass reveal" style="--i:3"><span class="ic"><i class="fa-solid fa-plug"></i></span><div><b>Enterprise API development</b><span>Secure REST APIs with JWT and role-based access control.</span></div></div>
+                        <div class="ach glass reveal" style="--i:4"><span class="ic"><i class="fa-solid fa-brain"></i></span><div><b>AI and RAG implementation</b><span>Hands-on experience integrating LLMs and retrieval into a product.</span></div></div>
+                        <div class="ach glass reveal" style="--i:5"><span class="ic"><i class="fa-solid fa-video"></i></span><div><b>Technical content through CodeSam</b><span>Tutorials and explainers shared with the developer community.</span></div></div>
+                        <div class="ach glass reveal" style="--i:6"><span class="ic"><i class="fa-brands fa-github"></i></span><div><b>GitHub projects</b><span>Open work and experiments at github.com/samadpr.</span></div></div>
+                    </div>
+                    <div class="cert-col">
+                        <h3 class="reveal">Certifications</h3>
+                        <div class="cert-list">
+                            <div class="cert glass reveal"><b>AI Agents Intensive Course</b><span>Google (Kaggle Learn) · 2026 · <a href="https://www.kaggle.com/certification/badges/abdulsamadpr/105" target="_blank" rel="noopener">View certificate</a></span></div>
+                            <div class="cert glass reveal" style="--i:1"><b>Microsoft Azure Essentials Professional Certificate</b><span>Microsoft &amp; LinkedIn Learning · 2026</span></div>
+                            <div class="cert glass reveal" style="--i:2"><b>System Analyst Certification</b><span>2024</span></div>
+                            <div class="cert glass reveal" style="--i:3"><b>ASP.NET Core Developer Certification</b><span>2024</span></div>
                         </div>
                     </div>
                 </div>
-            </section>
+            </div>
+        </section>
 
-            <!-- SERVICES -->
-            <section class="service section" id="services">
-                <div class="container">
-                    <div class="row">
-                        <div class="section-title padd-15">
-                            <h2>Services</h2>
+        <!-- ============ CODESAM ============ -->
+        <section id="codesam">
+            <div class="container">
+                <div class="section-head reveal">
+                    <span class="eyebrow">CodeSam – Content &amp; Media</span>
+                    <h2>Learning in public.</h2>
+                </div>
+                <div class="cs-hero glass reveal">
+                    <div>
+                        <h3>Code<span class="grad-text">Sam</span></h3>
+                        <p>CodeSam is my personal content brand where I share programming tutorials, .NET and Angular content, software engineering concepts, AI and emerging technology, developer tips and technical explainers, plus educational posters.</p>
+                        <div class="hero-cta" style="margin:0">
+                            <a class="btn btn-primary magnetic" href="https://youtube.com/@codesam333" target="_blank" rel="noopener"><i class="fa-brands fa-youtube"></i>Watch on YouTube</a>
+                            <a class="btn magnetic" href="https://www.instagram.com/code__sam" target="_blank" rel="noopener"><i class="fa-brands fa-instagram"></i>Follow on Instagram</a>
                         </div>
                     </div>
-                    <div class="row">
-                        <div class="service-item padd-15">
-                            <div class="service-item-inner" onclick="openModal('modal-fullstack')">
-                                <div class="icon"><i class="fa fa-layer-group"></i></div>
-                                <h4>Full-Stack Web Development</h4>
-                                <p>End-to-end enterprise web applications with ASP.NET Core backend and Angular
-                                    frontend.</p>
-                                <div class="service-click-hint">Click to learn more &#8594;</div>
-                            </div>
-                        </div>
-                        <div class="service-item padd-15">
-                            <div class="service-item-inner" onclick="openModal('modal-api')">
-                                <div class="icon"><i class="fa fa-plug"></i></div>
-                                <h4>REST API Development</h4>
-                                <p>Scalable, secure, and well-documented APIs following Clean Architecture and best
-                                    practices.</p>
-                                <div class="service-click-hint">Click to learn more &#8594;</div>
-                            </div>
-                        </div>
-                        <div class="service-item padd-15">
-                            <div class="service-item-inner" onclick="openModal('modal-mobile')">
-                                <div class="icon"><i class="fa fa-mobile-alt"></i></div>
-                                <h4>Mobile App Development</h4>
-                                <p>Cross-platform Flutter mobile applications for iOS and Android with real-time
-                                    features.</p>
-                                <div class="service-click-hint">Click to learn more &#8594;</div>
-                            </div>
-                        </div>
-                        <div class="service-item padd-15">
-                            <div class="service-item-inner" onclick="openModal('modal-ai')">
-                                <div class="icon"><i class="fa fa-brain"></i></div>
-                                <h4>AI Integration &amp; Development</h4>
-                                <p>Azure AI-powered enterprise assistants, RAG systems, and intelligent automation
-                                    workflows.</p>
-                                <div class="service-click-hint">Click to learn more &#8594;</div>
-                            </div>
-                        </div>
-                        <div class="service-item padd-15">
-                            <div class="service-item-inner" onclick="openModal('modal-cloud')">
-                                <div class="icon"><i class="fa fa-cloud"></i></div>
-                                <h4>Cloud &amp; Azure Solutions</h4>
-                                <p>Azure deployments, CI/CD pipelines, Docker containerization, and cloud-native
-                                    architecture.</p>
-                                <div class="service-click-hint">Click to learn more &#8594;</div>
-                            </div>
-                        </div>
-                        <div class="service-item padd-15">
-                            <div class="service-item-inner" onclick="openModal('modal-iot')">
-                                <div class="icon"><i class="fa fa-microchip"></i></div>
-                                <h4>IoT &amp; Device Integration</h4>
-                                <p>RFID, QR scanner, and IoT hardware integrations with backend systems and real-time
-                                    monitoring.</p>
-                                <div class="service-click-hint">Click to learn more &#8594;</div>
-                            </div>
-                        </div>
+                    <div class="topic-grid">
+                        <div class="topic"><i class="fa-solid fa-circle-play"></i>Programming tutorials</div>
+                        <div class="topic"><i class="fa-solid fa-code"></i>.NET &amp; Angular</div>
+                        <div class="topic"><i class="fa-solid fa-sitemap"></i>Engineering concepts</div>
+                        <div class="topic"><i class="fa-solid fa-microchip"></i>AI &amp; emerging tech</div>
+                        <div class="topic"><i class="fa-solid fa-lightbulb"></i>Developer tips</div>
+                        <div class="topic"><i class="fa-solid fa-image"></i>Educational posters</div>
                     </div>
                 </div>
-            </section>
 
-            <!-- PORTFOLIO -->
-            <section class="portfolio section" id="portfolio">
-                <div class="container">
-                    <div class="row">
-                        <div class="section-title padd-15">
-                            <h2>Portfolio</h2>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="portfolio-heading padd-15">
-                            <h2>My Projects :</h2>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="portfolio-filter padd-15">
-                            <button class="filter-btn active" data-filter="all">All</button>
-                            <button class="filter-btn" data-filter="enterprise">Enterprise</button>
-                            <button class="filter-btn" data-filter="mobile">Mobile</button>
-                            <button class="filter-btn" data-filter="ai">AI</button>
-                            <button class="filter-btn" data-filter="iot">IoT</button>
-                            <button class="filter-btn" data-filter="web">Web</button>
-                        </div>
-                    </div>
-                    <div class="row" id="portfolio-grid">
-                        <div class="portfolio-item padd-15" data-category="enterprise ai iot">
-                            <div class="portfolio-item-inner shadow-dark" onclick="openProject('sams')">
-                                <div class="portfolio-card-top">
-                                    <div class="portfolio-card-icon"><i class="fa fa-boxes-stacked"></i></div>
-                                    <h4>Smart Asset Management System (SAMS)</h4>
-                                    <p>Enterprise platform to manage assets with AI-powered assistant and RFID
-                                        integration.</p>
-                                </div>
-                                <div class="portfolio-card-bottom"><span class="port-tag">ASP.NET Core</span><span
-                                        class="port-tag">Angular</span><span class="port-tag">Azure AI</span><span
-                                        class="port-tag">RFID</span></div>
-                                <div class="portfolio-card-view">View Details <i class="fa fa-arrow-right"></i></div>
-                            </div>
-                        </div>
-                        <div class="portfolio-item padd-15" data-category="mobile iot">
-                            <div class="portfolio-item-inner shadow-dark" onclick="openProject('events')">
-                                <div class="portfolio-card-top">
-                                    <div class="portfolio-card-icon" style="background:#fa5b0f"><i
-                                            class="fa fa-qrcode"></i></div>
-                                    <h4>Event Check-In &amp; QR Scanning App</h4>
-                                    <p>High-performance Flutter app deployed for Netflix events (Wednesday S2, Stranger
-                                        Things S5) in Saudi Arabia.</p>
-                                </div>
-                                <div class="portfolio-card-bottom"><span class="port-tag">Flutter</span><span
-                                        class="port-tag">REST APIs</span><span class="port-tag">QR Scanning</span></div>
-                                <div class="portfolio-card-view">View Details <i class="fa fa-arrow-right"></i></div>
-                            </div>
-                        </div>
-                        <div class="portfolio-item padd-15" data-category="mobile iot enterprise">
-                            <div class="portfolio-item-inner shadow-dark" onclick="openProject('fii')">
-                                <div class="portfolio-card-top">
-                                    <div class="portfolio-card-icon" style="background:#37b182"><i
-                                            class="fa fa-id-badge"></i></div>
-                                    <h4>FII Guest Entry &amp; UHF RFID Monitoring</h4>
-                                    <p>Deployed at the FII Global Investment Conference, Riyadh, Saudi Arabia.</p>
-                                </div>
-                                <div class="portfolio-card-bottom"><span class="port-tag">Flutter</span><span
-                                        class="port-tag">UHF RFID</span><span class="port-tag">.NET MAUI Blazor</span>
-                                </div>
-                                <div class="portfolio-card-view">View Details <i class="fa fa-arrow-right"></i></div>
-                            </div>
-                        </div>
-                        <div class="portfolio-item padd-15" data-category="iot enterprise">
-                            <div class="portfolio-item-inner shadow-dark" onclick="openProject('rfid')">
-                                <div class="portfolio-card-top">
-                                    <div class="portfolio-card-icon" style="background:#1854b4"><i
-                                            class="fa fa-book"></i></div>
-                                    <h4>RFID Anti-Theft &mdash; InfoBookz Library</h4>
-                                    <p>Automated library theft prevention with real-time RFID alerts and alarm
-                                        mechanisms.</p>
-                                </div>
-                                <div class="portfolio-card-bottom"><span class="port-tag">.NET Core</span><span
-                                        class="port-tag">RFID Integration</span><span class="port-tag">C#</span></div>
-                                <div class="portfolio-card-view">View Details <i class="fa fa-arrow-right"></i></div>
-                            </div>
-                        </div>
-                        <div class="portfolio-item padd-15" data-category="mobile">
-                            <div class="portfolio-item-inner shadow-dark" onclick="openProject('invoice')">
-                                <div class="portfolio-card-top">
-                                    <div class="portfolio-card-icon" style="background:#f021b2"><i
-                                            class="fa fa-file-invoice"></i></div>
-                                    <h4>Invoice Management &amp; PDF Generation</h4>
-                                    <p>Flutter mobile app for professional invoices with automatic VAT calculations and
-                                        PDF export.</p>
-                                </div>
-                                <div class="portfolio-card-bottom"><span class="port-tag">Flutter</span><span
-                                        class="port-tag">Dart</span><span class="port-tag">PDF Generation</span></div>
-                                <div class="portfolio-card-view">View Details <i class="fa fa-arrow-right"></i></div>
-                            </div>
-                        </div>
-                        <div class="portfolio-item padd-15" data-category="enterprise web">
-                            <div class="portfolio-item-inner shadow-dark" onclick="openProject('jobportal')">
-                                <div class="portfolio-card-top">
-                                    <div class="portfolio-card-icon" style="background:#ec1839"><i
-                                            class="fa fa-briefcase"></i></div>
-                                    <h4>Job Portal Application</h4>
-                                    <p>Full-stack job portal built during internship at Aitrich Technologies with full
-                                        SDLC and Agile methodology.</p>
-                                </div>
-                                <div class="portfolio-card-bottom"><span class="port-tag">ASP.NET Core</span><span
-                                        class="port-tag">Angular</span><span class="port-tag">SQL Server</span></div>
-                                <div class="portfolio-card-view">View Details <i class="fa fa-arrow-right"></i></div>
-                            </div>
-                        </div>
-                        <div class="portfolio-item padd-15" data-category="web">
-                            <div class="portfolio-item-inner shadow-dark" onclick="openProject('astralution')">
-                                <div class="portfolio-card-top">
-                                    <div class="portfolio-card-icon" style="background:#37b182"><i
-                                            class="fa fa-satellite-dish"></i></div>
-                                    <h4>Astralution &mdash; AI Drone Technology Website</h4>
-                                    <p>Responsive corporate website for AI-powered drone technology and innovation
-                                        services.</p>
-                                </div>
-                                <div class="portfolio-card-bottom"><span class="port-tag">HTML</span><span
-                                        class="port-tag">CSS</span><span class="port-tag">JavaScript</span><span
-                                        class="port-tag">Responsive</span></div>
-                                <div class="portfolio-card-view">View Details <i class="fa fa-arrow-right"></i></div>
-                            </div>
-                        </div>
-                        <div class="portfolio-item padd-15" data-category="ai enterprise">
-                            <div class="portfolio-item-inner shadow-dark" onclick="openProject('ai_assistant')">
-                                <div class="portfolio-card-top">
-                                    <div class="portfolio-card-icon" style="background:#fa5b0f"><i
-                                            class="fa fa-robot"></i></div>
-                                    <h4>AI Enterprise Assistant (RAG System)</h4>
-                                    <p>Azure AI-powered assistant with RAG, contextual responses from live asset data,
-                                        and role-aware permissions.</p>
-                                </div>
-                                <div class="portfolio-card-bottom"><span class="port-tag">Azure AI Foundry</span><span
-                                        class="port-tag">LLMs</span><span class="port-tag">RAG</span></div>
-                                <div class="portfolio-card-view">View Details <i class="fa fa-arrow-right"></i></div>
-                            </div>
-                        </div>
-                        <div class="portfolio-item padd-15" data-category="enterprise web">
-                            <div class="portfolio-item-inner shadow-dark" onclick="openProject('saudi_apps')">
-                                <div class="portfolio-card-top">
-                                    <div class="portfolio-card-icon" style="background:#1854b4"><i
-                                            class="fa fa-globe"></i></div>
-                                    <h4>Custom Web Apps &mdash; Saudi Arabia</h4>
-                                    <p>Multiple ASP.NET Core web applications with PDF report generators and IIS-hosted
-                                        deployments.</p>
-                                </div>
-                                <div class="portfolio-card-bottom"><span class="port-tag">ASP.NET Core</span><span
-                                        class="port-tag">MySQL</span><span class="port-tag">FastReport</span><span
-                                        class="port-tag">IIS</span></div>
-                                <div class="portfolio-card-view">View Details <i class="fa fa-arrow-right"></i></div>
-                            </div>
-                        </div>
-                    </div>
+                <div class="beyond-title reveal">
+                    <h3>Beyond Coding – Connect, Learn &amp; Build</h3>
+                    <p>Find me where I write, share and build.</p>
                 </div>
-            </section>
-
-            <!-- CONTACT -->
-            <section class="contact section" id="contact">
-                <div class="container">
-                    <div class="row">
-                        <div class="section-title padd-15">
-                            <h2>Contact Me</h2>
-                        </div>
-                    </div>
-                    <h3 class="contact-title padd-15">Have You Any Questions?</h3>
-                    <h4 class="contact-sub-title padd-15">I'M AT YOUR SERVICES</h4>
-                    <div class="row">
-                        <div class="contact-info-item padd-15">
-                            <div class="icon"><i class="fa fa-phone"></i></div>
-                            <h4>Call Us On</h4>
-                            <p><a href="tel:+918139039704" class="contact-action-link">+91 8139039704</a></p>
-                        </div>
-                        <div class="contact-info-item padd-15">
-                            <div class="icon"><i class="fa fa-map-marker-alt"></i></div>
-                            <h4>Location</h4>
-                            <p><a href="https://maps.app.goo.gl/5pCWNQha7NbGD6iJ9" target="_blank" rel="noopener"
-                                    class="contact-action-link">Thrissur, Kerala, India &#x1F4CD;</a></p>
-                        </div>
-                        <div class="contact-info-item padd-15">
-                            <div class="icon"><i class="fa fa-envelope"></i></div>
-                            <h4>Email</h4>
-                            <p><a href="mailto:abdulsamadpr.dev@gmail.com"
-                                    class="contact-action-link">abdulsamadpr.dev@gmail.com</a></p>
-                        </div>
-                        <div class="contact-info-item padd-15">
-                            <div class="icon"><i class="fab fa-github contact-github-icon"></i></div>
-                            <h4>GitHub</h4>
-                            <p><a href="https://github.com/samadpr" target="_blank" rel="noopener"
-                                    class="contact-action-link">github.com/samadpr</a></p>
-                        </div>
-                    </div>
-                    <h3 class="contact-title padd-15">SEND ME AN EMAIL</h3>
-                    <h4 class="contact-sub-title padd-15">I'M VERY RESPONSIVE TO MESSAGES</h4>
-                    <div class="row">
-                        <form id="submit-form" class="contact-form padd-15">
-                            <div class="row">
-                                <div class="form-item col-6 padd-15">
-                                    <div class="form-group"><input type="text" name="name" class="form-control"
-                                            placeholder="Name" required></div>
-                                </div>
-                                <div class="form-item col-6 padd-15">
-                                    <div class="form-group"><input type="email" name="email" class="form-control"
-                                            placeholder="Email" required></div>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="form-item col-12 padd-15">
-                                    <div class="form-group"><input type="text" name="subject" class="form-control"
-                                            placeholder="Subject" required></div>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="form-item col-12 padd-15">
-                                    <div class="form-group"><textarea name="message" class="form-control"
-                                            placeholder="Message" cols="30" rows="10" required></textarea></div>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="form-item col-12 padd-15"><button type="submit" class="btn"
-                                        id="form-submit-btn">Send Message</button></div>
-                            </div>
-                        </form>
-                    </div>
+                <div class="social-grid">
+                    <a class="social glass reveal" href="https://www.linkedin.com/in/abdulsamadpr/" target="_blank" rel="noopener"><span class="ic"><i class="fa-brands fa-linkedin-in"></i></span><div><b>LinkedIn</b><small>in/abdulsamadpr</small></div><i class="fa-solid fa-arrow-up-right-from-square go"></i></a>
+                    <a class="social glass reveal" style="--i:1" href="https://github.com/samadpr" target="_blank" rel="noopener"><span class="ic"><i class="fa-brands fa-github"></i></span><div><b>GitHub</b><small>github.com/samadpr</small></div><i class="fa-solid fa-arrow-up-right-from-square go"></i></a>
+                    <a class="social glass reveal" style="--i:2" href="https://www.instagram.com/code__sam" target="_blank" rel="noopener"><span class="ic"><i class="fa-brands fa-instagram"></i></span><div><b>Instagram</b><small>@code__sam</small></div><i class="fa-solid fa-arrow-up-right-from-square go"></i></a>
+                    <a class="social glass reveal" style="--i:3" href="https://youtube.com/@codesam333" target="_blank" rel="noopener"><span class="ic"><i class="fa-brands fa-youtube"></i></span><div><b>YouTube</b><small>@codesam333</small></div><i class="fa-solid fa-arrow-up-right-from-square go"></i></a>
                 </div>
-            </section>
+            </div>
+        </section>
 
+        <!-- ============ CONTACT ============ -->
+        <section id="contact">
+            <div class="container">
+                <div class="section-head reveal">
+                    <span class="eyebrow">Contact</span>
+                    <h2>Let's build something reliable.</h2>
+                    <p>Have a project, role or idea in mind? Send a message or reach out on any channel below.</p>
+                </div>
+                <div class="contact-grid">
+                    <div class="contact-cards">
+                        <a class="social glass reveal" href="mailto:abdulsamadpr.dev@gmail.com"><span class="ic"><i class="fa-solid fa-envelope"></i></span><div><b>Email</b><small>abdulsamadpr.dev@gmail.com</small></div><i class="fa-solid fa-arrow-right go"></i></a>
+                        <a class="social glass reveal" style="--i:1" href="doc/Abdul-Samad-PR-Resume.pdf" download><span class="ic"><i class="fa-solid fa-file-arrow-down"></i></span><div><b>Resume</b><small>Download PDF</small></div><i class="fa-solid fa-arrow-down go"></i></a>
+                        <a class="social glass reveal" style="--i:2" href="https://www.linkedin.com/in/abdulsamadpr/" target="_blank" rel="noopener"><span class="ic"><i class="fa-brands fa-linkedin-in"></i></span><div><b>LinkedIn</b><small>in/abdulsamadpr</small></div><i class="fa-solid fa-arrow-up-right-from-square go"></i></a>
+                        <a class="social glass reveal" style="--i:3" href="https://github.com/samadpr" target="_blank" rel="noopener"><span class="ic"><i class="fa-brands fa-github"></i></span><div><b>GitHub</b><small>github.com/samadpr</small></div><i class="fa-solid fa-arrow-up-right-from-square go"></i></a>
+                        <a class="social glass reveal" style="--i:4" href="https://www.instagram.com/code__sam" target="_blank" rel="noopener"><span class="ic"><i class="fa-brands fa-instagram"></i></span><div><b>Instagram</b><small>@code__sam</small></div><i class="fa-solid fa-arrow-up-right-from-square go"></i></a>
+                        <a class="social glass reveal" style="--i:5" href="https://youtube.com/@codesam333" target="_blank" rel="noopener"><span class="ic"><i class="fa-brands fa-youtube"></i></span><div><b>YouTube</b><small>@codesam333</small></div><i class="fa-solid fa-arrow-up-right-from-square go"></i></a>
+                    </div>
+                    <form class="contact-form glass reveal" id="contact-form" novalidate>
+                        <div class="row">
+                            <div class="field"><label for="f-name">Name</label><input id="f-name" name="name" type="text" autocomplete="name" required></div>
+                            <div class="field"><label for="f-email">Email</label><input id="f-email" name="email" type="email" autocomplete="email" required></div>
+                        </div>
+                        <div class="field"><label for="f-subject">Subject</label><input id="f-subject" name="subject" type="text" required></div>
+                        <div class="field"><label for="f-msg">Message</label><textarea id="f-msg" name="message" required></textarea></div>
+                        <input class="hp" type="text" name="website" tabindex="-1" autocomplete="off" aria-hidden="true">
+                        <button class="btn btn-primary magnetic" type="submit" id="f-btn" style="justify-self:start"><i class="fa-solid fa-paper-plane"></i>Send message</button>
+                        <p class="form-status" id="f-status" role="status" aria-live="polite"></p>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <span class="foot-brand"><img src="images/brand/as-logo.svg" alt="" width="26" height="26" loading="lazy"><span><b>Samadpr<i>.</i></b> © <span id="year">2026</span> Abdul Samad P R. Built by hand with HTML, CSS and JavaScript.</span></span>
+            <span><a href="#home">Back to top ↑</a></span>
         </div>
-    </div>
-    <!-- ====== Main Container End ====== -->
+    </footer>
 
-    <!-- Style Switcher -->
-    <div class="style-switcher">
-        <div class="style-switcher-toggler s-icon"><i class="fas fa-cog fa-spin"></i></div>
-        <div class="day-night s-icon"><i class="fas"></i></div>
-        <h4>Theme Colors</h4>
-        <div class="colors">
-            <span class="color-1" onclick="setActiveColor('color-1')"></span>
-            <span class="color-2" onclick="setActiveColor('color-2')"></span>
-            <span class="color-3" onclick="setActiveColor('color-3')"></span>
-            <span class="color-4" onclick="setActiveColor('color-4')"></span>
-            <span class="color-5" onclick="setActiveColor('color-5')"></span>
+    <button class="icon-btn to-top" id="to-top" aria-label="Back to top"><i class="fa-solid fa-arrow-up"></i></button>
+
+    <!-- Appearance panel (kept outside <header>: its backdrop-filter would trap position:fixed) -->
+    <div class="ap-backdrop" id="ap-backdrop" aria-hidden="true"></div>
+    <div class="ap" id="ap" role="dialog" aria-labelledby="ap-title">
+        <div class="ap-head">
+            <div><h2 id="ap-title">Appearance</h2><p>Mode and accent colour</p></div>
+            <button class="icon-btn ap-close" id="ap-close" type="button" aria-label="Close appearance settings"><i class="fa-solid fa-xmark"></i></button>
         </div>
+        <div class="ap-section">
+            <div class="ap-label"><span id="ap-mode-label">Mode</span><output id="ap-mode-out" for="ap-mode-label"></output></div>
+            <div class="seg" role="radiogroup" aria-labelledby="ap-mode-label">
+                <span class="seg-ind" aria-hidden="true"></span>
+                <button type="button" role="radio" data-mode="light" aria-checked="false"><i class="fa-solid fa-sun"></i>Light</button>
+                <button type="button" role="radio" data-mode="dark" aria-checked="false"><i class="fa-solid fa-moon"></i>Dark</button>
+                <button type="button" role="radio" data-mode="system" aria-checked="false"><i class="fa-solid fa-desktop"></i>System</button>
+            </div>
+        </div>
+        <div class="ap-section">
+            <div class="ap-label"><span id="ap-acc-label">Accent colour</span><output id="ap-acc-out" for="ap-acc-label"></output></div>
+            <div class="acc-grid" role="radiogroup" aria-labelledby="ap-acc-label">
+                <button type="button" role="radio" class="acc-card" data-accent="blue" aria-checked="false" aria-label="Electric Blue" style="--d1:#5b9bff;--d2:#22d3ee;--l1:#1d4ed8;--l2:#0e7490"><span class="acc-prev"></span><span class="acc-name">Electric Blue</span><span class="acc-check"><i class="fa-solid fa-check"></i></span></button>
+                <button type="button" role="radio" class="acc-card" data-accent="teal" aria-checked="false" aria-label="Teal" style="--d1:#2dd4bf;--d2:#60a5fa;--l1:#0f766e;--l2:#1d4ed8"><span class="acc-prev"></span><span class="acc-name">Teal</span><span class="acc-check"><i class="fa-solid fa-check"></i></span></button>
+                <button type="button" role="radio" class="acc-card" data-accent="violet" aria-checked="false" aria-label="Violet" style="--d1:#a78bfa;--d2:#f0abfc;--l1:#6d28d9;--l2:#a21caf"><span class="acc-prev"></span><span class="acc-name">Violet</span><span class="acc-check"><i class="fa-solid fa-check"></i></span></button>
+                <button type="button" role="radio" class="acc-card" data-accent="emerald" aria-checked="false" aria-label="Emerald" style="--d1:#34d399;--d2:#a3e635;--l1:#047857;--l2:#4d7c0f"><span class="acc-prev"></span><span class="acc-name">Emerald</span><span class="acc-check"><i class="fa-solid fa-check"></i></span></button>
+                <button type="button" role="radio" class="acc-card" data-accent="orange" aria-checked="false" aria-label="Sunset" style="--d1:#fb923c;--d2:#fbbf24;--l1:#c2410c;--l2:#b45309"><span class="acc-prev"></span><span class="acc-name">Sunset</span><span class="acc-check"><i class="fa-solid fa-check"></i></span></button>
+                <button type="button" role="radio" class="acc-card" data-accent="rose" aria-checked="false" aria-label="Rose" style="--d1:#fb7185;--d2:#c084fc;--l1:#be123c;--l2:#7e22ce"><span class="acc-prev"></span><span class="acc-name">Rose</span><span class="acc-check"><i class="fa-solid fa-check"></i></span></button>
+            </div>
+        </div>
+        <p class="ap-hint"><i class="fa-solid fa-eye"></i>Hover a colour to preview it live</p>
     </div>
 
-    <!-- SERVICE MODALS -->
-    <div class="modal-overlay" id="modal-fullstack" onclick="closeModal(event,'modal-fullstack')">
-        <div class="modal-box">
-            <div class="modal-header">
-                <div class="modal-icon"><i class="fa fa-layer-group"></i></div><button class="modal-close"
-                    onclick="document.getElementById('modal-fullstack').classList.remove('open');document.body.style.overflow=''">&#x2715;</button>
+    <!-- Project case-study dialog -->
+    <dialog class="pd" id="pd" aria-labelledby="pd-title">
+        <div class="pd-head">
+            <div>
+                <div class="chip-row" id="pd-tags"></div>
+                <h3 id="pd-title"></h3>
+                <p class="sub" id="pd-sub"></p>
             </div>
-            <div class="modal-title">Full-Stack Web Development</div>
-            <div class="modal-subtitle">ASP.NET Core &middot; Angular &middot; SQL Server &middot; Clean Architecture
-            </div>
-            <div class="modal-body">
-                <p>I build end-to-end enterprise web applications from database design to REST APIs to Angular
-                    frontends, following Clean Architecture and Service-Repository pattern for maintainable, testable
-                    codebases.</p>
-                <div class="modal-features">
-                    <h5>What I deliver:</h5>
-                    <ul>
-                        <li>Secure REST API development with ASP.NET Core Web API</li>
-                        <li>Role-based authentication using JWT and ASP.NET Identity</li>
-                        <li>Angular-based admin dashboards with real-time data insights</li>
-                        <li>Multi-tenant SaaS architectures</li>
-                        <li>SQL Server design, stored procedures, and performance optimization</li>
-                        <li>Background services and scheduled tasks with .NET Worker Services</li>
-                    </ul>
-                </div>
-            </div>
-            <div class="modal-tech-tags"><span class="modal-tech-tag">C#</span><span class="modal-tech-tag">ASP.NET
-                    Core</span><span class="modal-tech-tag">Angular</span><span
-                    class="modal-tech-tag">TypeScript</span><span class="modal-tech-tag">SQL Server</span><span
-                    class="modal-tech-tag">Entity Framework</span><span class="modal-tech-tag">JWT Auth</span><span
-                    class="modal-tech-tag">Swagger</span></div>
+            <button class="icon-btn" id="pd-close" aria-label="Close project details"><i class="fa-solid fa-xmark"></i></button>
         </div>
-    </div>
-    <div class="modal-overlay" id="modal-api" onclick="closeModal(event,'modal-api')">
-        <div class="modal-box">
-            <div class="modal-header">
-                <div class="modal-icon"><i class="fa fa-plug"></i></div><button class="modal-close"
-                    onclick="document.getElementById('modal-api').classList.remove('open');document.body.style.overflow=''">&#x2715;</button>
-            </div>
-            <div class="modal-title">REST API Development</div>
-            <div class="modal-subtitle">ASP.NET Core Web API &middot; Swagger &middot; Postman &middot; Clean
-                Architecture</div>
-            <div class="modal-body">
-                <p>I design and build scalable, well-documented REST APIs that power enterprise applications, mobile
-                    apps, and third-party integrations with security, performance, and developer experience in mind.</p>
-                <div class="modal-features">
-                    <h5>What I deliver:</h5>
-                    <ul>
-                        <li>RESTful API design following industry best practices</li>
-                        <li>JWT-based secure authentication and multi-role authorization</li>
-                        <li>Comprehensive API documentation with Swagger/OpenAPI</li>
-                        <li>Rate limiting, versioning, and error handling middleware</li>
-                        <li>Integration with third-party services and external APIs</li>
-                        <li>API testing and validation with Postman collections</li>
-                    </ul>
-                </div>
-            </div>
-            <div class="modal-tech-tags"><span class="modal-tech-tag">ASP.NET Core Web API</span><span
-                    class="modal-tech-tag">C#</span><span class="modal-tech-tag">Swagger</span><span
-                    class="modal-tech-tag">Postman</span><span class="modal-tech-tag">RabbitMQ</span><span
-                    class="modal-tech-tag">Docker</span></div>
-        </div>
-    </div>
-    <div class="modal-overlay" id="modal-mobile" onclick="closeModal(event,'modal-mobile')">
-        <div class="modal-box">
-            <div class="modal-header">
-                <div class="modal-icon"><i class="fa fa-mobile-alt"></i></div><button class="modal-close"
-                    onclick="document.getElementById('modal-mobile').classList.remove('open');document.body.style.overflow=''">&#x2715;</button>
-            </div>
-            <div class="modal-title">Mobile App Development</div>
-            <div class="modal-subtitle">Flutter &middot; Dart &middot; Cross-Platform iOS &amp; Android</div>
-            <div class="modal-body">
-                <p>I build high-performance cross-platform mobile applications using Flutter, deployed at large-scale
-                    international events handling thousands of concurrent users.</p>
-                <div class="modal-features">
-                    <h5>What I deliver:</h5>
-                    <ul>
-                        <li>Cross-platform Flutter apps for iOS and Android from a single codebase</li>
-                        <li>Real-time QR code scanning and device hardware integrations</li>
-                        <li>REST API integration with real-time data synchronization</li>
-                        <li>High-performance UI optimized for thousands of concurrent entries</li>
-                        <li>PDF generation, invoice management, and document export</li>
-                        <li>Firebase integration for push notifications and analytics</li>
-                    </ul>
-                </div>
-            </div>
-            <div class="modal-tech-tags"><span class="modal-tech-tag">Flutter</span><span
-                    class="modal-tech-tag">Dart</span><span class="modal-tech-tag">Firebase</span><span
-                    class="modal-tech-tag">REST APIs</span><span class="modal-tech-tag">QR/RFID Integration</span><span
-                    class="modal-tech-tag">PDF Generation</span></div>
-        </div>
-    </div>
-    <div class="modal-overlay" id="modal-ai" onclick="closeModal(event,'modal-ai')">
-        <div class="modal-box">
-            <div class="modal-header">
-                <div class="modal-icon"><i class="fa fa-brain"></i></div><button class="modal-close"
-                    onclick="document.getElementById('modal-ai').classList.remove('open');document.body.style.overflow=''">&#x2715;</button>
-            </div>
-            <div class="modal-title">AI Integration &amp; Development</div>
-            <div class="modal-subtitle">Azure AI Foundry &middot; LLMs &middot; RAG &middot; Prompt Engineering</div>
-            <div class="modal-body">
-                <p>I integrate cutting-edge AI into enterprise applications &mdash; building intelligent assistants,
-                    semantic search, and AI-driven automation that boost user productivity and decision-making.</p>
-                <div class="modal-features">
-                    <h5>What I deliver:</h5>
-                    <ul>
-                        <li>Enterprise AI assistant development using Azure AI Foundry and LLMs</li>
-                        <li>Retrieval-Augmented Generation (RAG) for contextual, data-aware responses</li>
-                        <li>Advanced prompt engineering for accurate, role-aware AI outputs</li>
-                        <li>AI chat session management and conversation history tracking</li>
-                        <li>Semantic search and vector-based knowledge retrieval</li>
-                        <li>Permission-aware AI responses respecting user roles and data access</li>
-                    </ul>
-                </div>
-            </div>
-            <div class="modal-tech-tags"><span class="modal-tech-tag">Azure AI Foundry</span><span
-                    class="modal-tech-tag">LLMs</span><span class="modal-tech-tag">RAG</span><span
-                    class="modal-tech-tag">Prompt Engineering</span><span class="modal-tech-tag">Vector
-                    Search</span><span class="modal-tech-tag">Conversational AI</span></div>
-        </div>
-    </div>
-    <div class="modal-overlay" id="modal-cloud" onclick="closeModal(event,'modal-cloud')">
-        <div class="modal-box">
-            <div class="modal-header">
-                <div class="modal-icon"><i class="fa fa-cloud"></i></div><button class="modal-close"
-                    onclick="document.getElementById('modal-cloud').classList.remove('open');document.body.style.overflow=''">&#x2715;</button>
-            </div>
-            <div class="modal-title">Cloud &amp; Azure Solutions</div>
-            <div class="modal-subtitle">Microsoft Azure &middot; Docker &middot; CI/CD &middot; DevOps</div>
-            <div class="modal-body">
-                <p>I architect and deploy cloud-native solutions on Microsoft Azure &mdash; from containerized
-                    microservices to automated CI/CD pipelines and scalable app hosting for enterprise workloads.</p>
-                <div class="modal-features">
-                    <h5>What I deliver:</h5>
-                    <ul>
-                        <li>Azure App Services deployment and configuration</li>
-                        <li>Docker containerization and environment management</li>
-                        <li>CI/CD pipelines with Azure DevOps and GitHub Actions</li>
-                        <li>Azure Blob Storage, monitoring, and logging setup</li>
-                        <li>IIS server configuration and ASP.NET Core app hosting</li>
-                        <li>Secret management and secure environment configuration</li>
-                    </ul>
-                </div>
-            </div>
-            <div class="modal-tech-tags"><span class="modal-tech-tag">Microsoft Azure</span><span
-                    class="modal-tech-tag">Docker</span><span class="modal-tech-tag">Azure DevOps</span><span
-                    class="modal-tech-tag">GitHub Actions</span><span class="modal-tech-tag">IIS</span><span
-                    class="modal-tech-tag">CI/CD</span></div>
-        </div>
-    </div>
-    <div class="modal-overlay" id="modal-iot" onclick="closeModal(event,'modal-iot')">
-        <div class="modal-box">
-            <div class="modal-header">
-                <div class="modal-icon"><i class="fa fa-microchip"></i></div><button class="modal-close"
-                    onclick="document.getElementById('modal-iot').classList.remove('open');document.body.style.overflow=''">&#x2715;</button>
-            </div>
-            <div class="modal-title">IoT &amp; Device Integration</div>
-            <div class="modal-subtitle">.NET Worker Services &middot; RFID &middot; QR Scanners &middot; Real-Time</div>
-            <div class="modal-body">
-                <p>I specialize in bridging physical hardware with software &mdash; integrating RFID readers, QR
-                    scanners, and IoT devices with secure backend APIs and real-time monitoring interfaces.</p>
-                <div class="modal-features">
-                    <h5>What I deliver:</h5>
-                    <ul>
-                        <li>UHF RFID device integration for large-scale event monitoring</li>
-                        <li>QR code scanning systems for real-time attendee verification</li>
-                        <li>Anti-theft RFID gate monitoring with automated alerts</li>
-                        <li>.NET Worker Services for background IoT data processing</li>
-                        <li>Real-time device status monitoring dashboards</li>
-                        <li>Multi-device management with .NET MAUI Blazor Hybrid interfaces</li>
-                    </ul>
-                </div>
-            </div>
-            <div class="modal-tech-tags"><span class="modal-tech-tag">.NET Worker Services</span><span
-                    class="modal-tech-tag">UHF RFID</span><span class="modal-tech-tag">QR Scanning</span><span
-                    class="modal-tech-tag">.NET MAUI Blazor</span><span class="modal-tech-tag">Real-time APIs</span>
-            </div>
-        </div>
-    </div>
+        <div class="pd-body" id="pd-body"></div>
+    </dialog>
 
-    <!-- PROJECT DETAIL MODAL -->
-    <div class="modal-overlay project-detail-overlay" id="project-detail-modal" onclick="closeProjectModal(event)">
-        <div class="modal-box project-detail-box">
-            <div class="modal-header">
-                <div class="pd-icon-wrap" id="pd-icon"></div>
-                <button class="modal-close" id="pd-close-btn">&#x2715;</button>
-            </div>
-            <div class="pd-category-tags" id="pd-categories"></div>
-            <h2 class="pd-title" id="pd-title"></h2>
-            <div class="pd-subtitle" id="pd-subtitle"></div>
-            <div class="pd-description" id="pd-description"></div>
-            <div class="pd-section" id="pd-features-section">
-                <h5><i class="fa fa-check-circle" style="margin-right:8px;color:var(--skin-color)"></i>Key Features</h5>
-                <ul id="pd-features"></ul>
-            </div>
-            <div class="pd-section" id="pd-impact-section" style="display:none">
-                <h5><i class="fa fa-chart-line" style="margin-right:8px;color:var(--skin-color)"></i>Impact &amp;
-                    Results</h5>
-                <ul id="pd-impact"></ul>
-            </div>
-            <div class="pd-tech-section">
-                <h5><i class="fa fa-code" style="margin-right:8px;color:var(--skin-color)"></i>Tech Stack</h5>
-                <div class="pd-tech-tags" id="pd-tech"></div>
-            </div>
-            <div class="pd-footer" id="pd-footer"></div>
-        </div>
-    </div>
-
-    <!-- SUCCESS POPUP -->
-    <div id="success-popup" class="success-popup">
-        <div class="success-popup-inner">
-            <div class="success-icon"><i class="fa fa-check-circle"></i></div>
-            <div class="success-text">
-                <h3>Message Sent!</h3>
-                <p>Thank you! I'll get back to you shortly.</p>
-            </div>
-            <button class="success-close" onclick="hideSuccessPopup()">&#x2715;</button>
-        </div>
-        <div class="success-progress" id="success-progress"></div>
-    </div>
-
-    <!-- ======JS Files ====== -->
-    <script src="js/scriptForm.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.1.0/typed.umd.js"
-        integrity="sha512-+2pW8xXU/rNr7VS+H62aqapfRpqFwnSQh9ap6THjsm41AxgA0MhFRtfrABS+Lx2KHJn82UOrnBKhjZOXpom2LQ=="
-        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <script src="js/script.js"></script>
-    <script src="js/style-switcher.js"></script>
+    <script src="js/data.js" defer></script>
+    <script src="js/theme.js" defer></script>
+    <script src="js/skills.js" defer></script>
+    <script src="js/experience.js" defer></script>
+    <script src="js/main.js" defer></script>
+    <script src="js/fx.js" defer></script>
+    <script src="js/cursor.js" defer></script>
 </body>
 
 </html>

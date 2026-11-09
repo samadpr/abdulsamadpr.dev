@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="AS monogram">
+  <defs>
+    <linearGradient id="a" gradientUnits="userSpaceOnUse" x1="8" y1="4" x2="58" y2="60">
+      <stop offset="0" stop-color="#2563EB"/>
+      <stop offset=".55" stop-color="#22D3EE"/>
+      <stop offset=".82" stop-color="#22D3EE"/>
+      <stop offset="1" stop-color="#7C3AED"/>
+    </linearGradient>
+    <mask id="s" maskUnits="userSpaceOnUse" x="0" y="0" width="64" height="64">
+      <rect width="64" height="64" fill="#fff"/>
+      <path d="M39.5 25.5C36.5 21 26 22 26 28c0 6 13.5 4.5 13.5 11 0 5.5-11 5.5-14.5 2" fill="none" stroke="#000" stroke-width="5" stroke-linecap="round"/>
+    </mask>
+  </defs>
+  <!-- A: truncated apex + base notch. The S is cut through its body, so the background shows through (transparent-safe). -->
+  <path d="M28 5h8l24 53H46l-4-9H22l-4 9H4z" fill="url(#a)" mask="url(#s)"/>
+</svg>

@@ -1,0 +1,71 @@
+/* ==========================================================================
+   APPEARANCE PANEL
+   Lives at the end of <body> (not inside the nav, whose backdrop-filter would
+   trap position:fixed). JS positions it under the button on desktop and the
+   CSS turns it into a bottom sheet on small screens.
+   ========================================================================== */
+.ap-backdrop { position: fixed; inset: 0; z-index: 140; background: var(--scrim); backdrop-filter: blur(4px); -webkit-backdrop-filter: blur(4px);
+  opacity: 0; visibility: hidden; transition: opacity .3s ease, visibility 0s linear .3s; }
+.ap-backdrop.open { opacity: 1; visibility: visible; transition-delay: 0s; }
+@media (min-width: 641px) { .ap-backdrop { display: none; } }
+
+.ap { position: fixed; z-index: 150; top: 0; left: 0; width: 360px; max-width: calc(100vw - 24px); max-height: calc(100dvh - 24px); overflow-y: auto; overscroll-behavior: contain;
+  padding: 18px; border-radius: 22px; color: var(--text);
+  background: color-mix(in srgb, var(--surface-solid) 90%, transparent); backdrop-filter: blur(22px) saturate(1.5); -webkit-backdrop-filter: blur(22px) saturate(1.5);
+  border: 1px solid var(--border-strong); box-shadow: var(--shadow-lg), 0 0 0 1px color-mix(in srgb, var(--accent) 6%, transparent) inset;
+  transform-origin: calc(100% - 22px) 0; opacity: 0; visibility: hidden; pointer-events: none;
+  translate: var(--ap-x, 0px) var(--ap-y, 0px);
+  transform: translateY(-10px) scale(.95);
+  transition: opacity .22s ease, transform .35s var(--ease), visibility 0s linear .35s; }
+.ap.open { opacity: 1; visibility: visible; pointer-events: auto; transform: none; transition-delay: 0s; }
+
+.ap-head { display: flex; align-items: center; justify-content: space-between; gap: 12px; margin-bottom: 16px; }
+.ap-head h2 { font-size: 1.05rem; letter-spacing: -.01em; }
+.ap-head p { margin: 2px 0 0; font-size: var(--fs-xs); color: var(--text-faint); }
+.ap-close { width: 34px; height: 34px; border-radius: 10px; flex: none; }
+.ap-label { display: flex; justify-content: space-between; align-items: baseline; margin: 0 2px 10px; font-size: 11px; font-weight: 600; letter-spacing: .12em; text-transform: uppercase; color: var(--text-faint); }
+.ap-label output { letter-spacing: 0; text-transform: none; font-weight: 500; font-size: var(--fs-xs); color: var(--text-muted); }
+.ap-section + .ap-section { margin-top: 20px; }
+
+/* ---- segmented control ---- */
+.seg { --seg: 0; position: relative; display: grid; grid-template-columns: repeat(3, 1fr); padding: 4px; border-radius: 15px; background: var(--bg-2); border: 1px solid var(--border); }
+.seg-ind { position: absolute; top: 4px; bottom: 4px; left: 4px; width: calc((100% - 8px) / 3); border-radius: 11px; background: var(--gradient);
+  box-shadow: 0 8px 20px -8px var(--accent-line); transform: translateX(calc(var(--seg) * 100%)); transition: transform .45s var(--ease); }
+.seg button { position: relative; z-index: 1; min-width: 0; min-height: 42px; padding: 0 8px; border: 0; border-radius: 11px; background: transparent; color: var(--text-muted);
+  display: inline-flex; align-items: center; justify-content: center; gap: 8px; font-size: var(--fs-sm); font-weight: 500; line-height: 1; white-space: nowrap;
+  transition: color .25s ease; }
+.seg button i { width: 16px; text-align: center; font-size: .85rem; flex: none; transition: transform .35s var(--ease); }
+.seg button:hover { color: var(--text); }
+.seg button:hover i { transform: scale(1.15) rotate(-8deg); }
+.seg button[aria-checked="true"] { color: var(--on-accent); font-weight: 600; }
+.seg button:focus-visible { outline-offset: -2px; }
+
+/* ---- accent cards ---- */
+.acc-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; }
+.acc-card { --c1: var(--d1); --c2: var(--d2); position: relative; display: flex; flex-direction: column; gap: 9px; padding: 8px 8px 10px; border-radius: 14px; text-align: center; min-width: 0;
+  background: var(--bg-2); border: 1px solid var(--border); color: var(--text-muted);
+  transition: transform .3s var(--ease), border-color .2s, box-shadow .3s, color .2s; }
+html[data-theme="light"] .acc-card { --c1: var(--l1); --c2: var(--l2); }
+.acc-prev { position: relative; display: block; height: 38px; border-radius: 9px; overflow: hidden; background: linear-gradient(135deg, var(--c1), var(--c2)); }
+.acc-prev::after { content: ""; position: absolute; left: 8px; top: 8px; width: 22px; height: 6px; border-radius: 3px; background: rgb(255 255 255 / .55); box-shadow: 0 10px 0 -1px rgb(255 255 255 / .3); }
+.acc-name { font-size: 12px; font-weight: 500; line-height: 1.2; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.acc-check { position: absolute; top: 14px; right: 14px; width: 18px; height: 18px; border-radius: 50%; display: grid; place-items: center; font-size: 9px;
+  background: var(--surface-solid); color: var(--text); box-shadow: 0 2px 8px rgb(0 0 0 / .25); transform: scale(0); transition: transform .35s var(--ease); }
+.acc-card:hover { transform: translateY(-3px); border-color: var(--border-strong); color: var(--text); }
+.acc-card[aria-checked="true"] { border-color: var(--c1); color: var(--text); box-shadow: 0 0 0 1px var(--c1), 0 10px 24px -12px var(--c1); }
+.acc-card[aria-checked="true"] .acc-check { transform: scale(1); }
+.acc-card[aria-checked="true"] .acc-name { font-weight: 600; }
+.ap-hint { margin: 14px 2px 0; font-size: var(--fs-xs); color: var(--text-faint); display: flex; align-items: center; gap: 8px; }
+.ap-hint i { color: var(--accent); }
+@media (hover: none) { .ap-hint { display: none; } }
+
+/* ---- bottom sheet on small screens ---- */
+@media (max-width: 640px) {
+  .ap { top: auto; bottom: 0; left: 0; right: 0; width: auto; max-width: none; max-height: 86dvh; border-radius: 24px 24px 0 0; border-bottom: 0;
+    padding: 22px 18px calc(22px + env(safe-area-inset-bottom)); translate: none; transform-origin: 50% 100%; transform: translateY(100%); }
+  .ap.open { transform: none; }
+  .ap::before { content: ""; position: absolute; top: 8px; left: 50%; width: 40px; height: 4px; margin-left: -20px; border-radius: 2px; background: var(--border-strong); }
+  .acc-grid { grid-template-columns: repeat(2, 1fr); }
+  .acc-prev { height: 44px; }
+}
+@media (min-width: 641px) and (max-width: 900px) { .ap { width: 340px; } }

@@ -1,0 +1,120 @@
+/* ==========================================================================
+   DESIGN TOKENS
+   Mode   : html[data-theme="dark|light"]   (resolved; data-mode keeps user's choice incl. "system")
+   Accent : html[data-accent="blue|teal|violet|emerald|orange|rose"]
+   Every component reads only the semantic tokens at the bottom of each block.
+   ========================================================================== */
+
+:root {
+  /* ---- type ---- */
+  --font-display: "Sora", "Inter", system-ui, sans-serif;
+  --font-body: "Inter", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, "Cascadia Code", Consolas, monospace;
+
+  --fs-xs: 0.78rem;
+  --fs-sm: 0.9rem;
+  --fs-md: 1rem;
+  --fs-lg: 1.15rem;
+  --fs-xl: clamp(1.35rem, 1.1rem + 1vw, 1.75rem);
+  --fs-2xl: clamp(1.9rem, 1.4rem + 2vw, 2.75rem);
+  --fs-hero: clamp(2rem, 1rem + 3.4vw, 3.5rem);
+
+  /* ---- spacing (4px base) ---- */
+  --sp-1: 0.25rem;
+  --sp-2: 0.5rem;
+  --sp-3: 0.75rem;
+  --sp-4: 1rem;
+  --sp-5: 1.5rem;
+  --sp-6: 2rem;
+  --sp-7: 3rem;
+  --sp-8: 4.5rem;
+  --sp-9: clamp(4rem, 3rem + 5vw, 7.5rem);
+
+  /* ---- shape / motion ---- */
+  --r-sm: 8px;
+  --r-md: 14px;
+  --r-lg: 22px;
+  --r-pill: 999px;
+  --ease: cubic-bezier(0.22, 1, 0.36, 1);
+  --t-fast: 160ms;
+  --t-med: 320ms;
+  --t-slow: 700ms;
+
+  --container: 1200px;
+  --nav-h: 68px;
+}
+
+/* ---- accent palettes: one dark-tuned and one light-tuned value each (all >= 4.5:1 on their surfaces) ---- */
+html[data-accent="blue"]    { --acc-d: #5b9bff; --acc2-d: #22d3ee; --acc-l: #1d4ed8; --acc2-l: #0e7490; }
+html[data-accent="teal"]    { --acc-d: #2dd4bf; --acc2-d: #60a5fa; --acc-l: #0f766e; --acc2-l: #1d4ed8; }
+html[data-accent="violet"]  { --acc-d: #a78bfa; --acc2-d: #f0abfc; --acc-l: #6d28d9; --acc2-l: #a21caf; }
+html[data-accent="emerald"] { --acc-d: #34d399; --acc2-d: #a3e635; --acc-l: #047857; --acc2-l: #4d7c0f; }
+html[data-accent="orange"]  { --acc-d: #fb923c; --acc2-d: #fbbf24; --acc-l: #c2410c; --acc2-l: #b45309; }
+html[data-accent="rose"]    { --acc-d: #fb7185; --acc2-d: #c084fc; --acc-l: #be123c; --acc2-l: #7e22ce; }
+
+/* ---- DARK ---- */
+html[data-theme="dark"] {
+  color-scheme: dark;
+  --bg: #070d1a;
+  --bg-2: #0b1324;
+  --surface: rgba(18, 28, 50, 0.62);
+  --surface-solid: #101a31;
+  --surface-hover: rgba(26, 40, 70, 0.78);
+  --border: rgba(148, 170, 220, 0.16);
+  --border-strong: rgba(148, 170, 220, 0.3);
+  --text: #e8eefc;
+  --text-muted: #a3b1cf;
+  --text-faint: #7d8cab;
+  --accent: var(--acc-d);
+  --accent-text: var(--acc-d);
+  --accent-2: var(--acc2-d);
+  --on-accent: #06101f;
+  --shadow: 0 10px 40px -12px rgba(0, 0, 0, 0.6);
+  --shadow-lg: 0 24px 70px -20px rgba(0, 0, 0, 0.75);
+  --grid-line: rgba(148, 170, 220, 0.06);
+  --blob-opacity: 0.32;
+  --nav-bg: rgba(7, 13, 26, 0.88);
+  --brand-a: #4F8BFF;
+  --brand-b: #22D3EE;
+  --ok: #34d399;
+  --danger: #fb7185;
+  --scrim: rgba(4, 8, 18, 0.66);
+}
+
+/* ---- LIGHT ---- */
+html[data-theme="light"] {
+  color-scheme: light;
+  --bg: #f5f8fe;
+  --bg-2: #eaf0fb;
+  --surface: rgba(255, 255, 255, 0.78);
+  --surface-solid: #ffffff;
+  --surface-hover: rgba(255, 255, 255, 0.98);
+  --border: rgba(30, 50, 100, 0.12);
+  --border-strong: rgba(30, 50, 100, 0.26);
+  --text: #0e1730;
+  --text-muted: #44516f;
+  --text-faint: #5b6882;
+  --accent: var(--acc-l);
+  --accent-text: color-mix(in srgb, var(--acc-l) 70%, #000);
+  --accent-2: var(--acc2-l);
+  --on-accent: #ffffff;
+  --shadow: 0 10px 34px -14px rgba(25, 45, 100, 0.25);
+  --shadow-lg: 0 24px 60px -22px rgba(25, 45, 100, 0.35);
+  --grid-line: rgba(30, 50, 100, 0.05);
+  --blob-opacity: 0.2;
+  --nav-bg: rgba(245, 248, 254, 0.9);
+  --brand-a: #2563EB;
+  --brand-b: #0891B2;
+  --ok: #047857;
+  --danger: #be123c;
+  --scrim: rgba(14, 23, 48, 0.45);
+}
+
+/* derived (work in both modes) */
+:root {
+  --accent-soft: color-mix(in srgb, var(--accent) 14%, transparent);
+  --accent-line: color-mix(in srgb, var(--accent) 45%, transparent);
+  --gradient: linear-gradient(120deg, var(--accent), var(--accent-2));
+  --ok-glow: color-mix(in srgb, var(--ok) 55%, transparent);
+  --glow: 0 14px 40px -14px var(--accent-line);
+}

@@ -1,0 +1,45 @@
+/* ==========================================================================
+   BRAND: header lockup, mobile menu motion, loader mark, footer lockup
+   Mark = AS monogram (images/brand/as-logo.svg). Wordmark = "Samadpr" + cyan dot.
+   ========================================================================== */
+.brand { display: inline-flex; align-items: center; gap: .7rem; padding: 4px 8px 4px 2px; margin-left: -2px; border-radius: 12px; color: var(--text);
+  transition: transform .35s var(--ease); -webkit-tap-highlight-color: transparent; }
+.brand:hover { text-decoration: none; }
+.brand:active { transform: scale(.97); }
+.brand-mark { width: 36px; height: 36px; flex: none; transition: transform .45s var(--ease), filter .45s ease; }
+.brand:hover .brand-mark, .brand:focus-visible .brand-mark { transform: scale(1.08); filter: drop-shadow(0 0 9px color-mix(in srgb, var(--brand-b) 55%, transparent)); }
+
+/* left half of the gradient is plain text colour; on hover the window slides to the blue→cyan half */
+.brand-word { font-family: var(--font-display); font-weight: 700; font-size: 1.3rem; line-height: 1; letter-spacing: -.035em; white-space: nowrap;
+  background: linear-gradient(90deg, var(--text) 0 50%, var(--brand-a) 62%, var(--brand-b) 100%) 0 0 / 220% 100%;
+  -webkit-background-clip: text; background-clip: text; color: transparent; -webkit-text-fill-color: transparent;
+  transition: background-position .6s var(--ease); }
+.brand:hover .brand-word, .brand:focus-visible .brand-word { background-position: 100% 0; }
+.brand-word b { font-weight: 700; color: var(--brand-b); -webkit-text-fill-color: var(--brand-b); }
+
+@media (max-width: 420px) {
+  .brand { gap: .55rem; }
+  .brand-mark { width: 32px; height: 32px; }
+  .brand-word { font-size: 1.15rem; }
+}
+
+/* mobile menu: links settle in one after another */
+@media (max-width: 1100px) {
+  .nav-links a { opacity: 0; translate: 0 -8px; transition: opacity .35s ease calc(var(--k, 0) * 35ms), translate .45s var(--ease) calc(var(--k, 0) * 35ms), color var(--t-fast); }
+  .nav-links.open a { opacity: 1; translate: 0 0; }
+  .nav-links a:nth-of-type(1) { --k: 1; } .nav-links a:nth-of-type(2) { --k: 2; } .nav-links a:nth-of-type(3) { --k: 3; }
+  .nav-links a:nth-of-type(4) { --k: 4; } .nav-links a:nth-of-type(5) { --k: 5; } .nav-links a:nth-of-type(6) { --k: 6; }
+  .nav-links a:nth-of-type(7) { --k: 7; } .nav-links a:nth-of-type(8) { --k: 8; } .nav-links a:nth-of-type(9) { --k: 9; }
+}
+
+/* loader */
+.loader-logo { width: 72px; height: 72px; animation: markPulse 1.5s ease-in-out infinite; }
+@keyframes markPulse { 0%, 100% { opacity: .55; transform: scale(.94); } 50% { opacity: 1; transform: scale(1); } }
+
+/* footer */
+.foot-brand { display: inline-flex; align-items: center; gap: .75rem; }
+.foot-brand img { width: 26px; height: 26px; flex: none; }
+.foot-brand b { font-family: var(--font-display); color: var(--text); letter-spacing: -.02em; }
+.foot-brand i { font-style: normal; color: var(--brand-b); }
+
+main > section:focus { outline: none; }
