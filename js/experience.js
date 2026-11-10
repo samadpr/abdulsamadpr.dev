@@ -4,40 +4,40 @@
    Wording follows the resume. Nothing is added from outside it: no extra roles, tools, dates or metrics.
    Each entry:  highlights = shown by default  ·  more = revealed by "View responsibilities"
    ========================================================================== */
-window.EXPERIENCE_SUMMARY = 'Full Stack .NET Developer with 2+ years of experience building enterprise web applications, REST APIs, mobile applications, and IoT integrated solutions using ASP.NET Core, Angular, Flutter, SQL Server, and Azure. Experienced in Asset Management Systems, RFID integrations, AI powered enterprise assistants, and large scale event technology platforms. Passionate about designing scalable, secure, and high performance software solutions.';
+window.EXPERIENCE_SUMMARY = 'Full Stack .NET developer with more than two years of experience. I build enterprise web applications, REST APIs, mobile apps and IoT solutions with ASP.NET Core, Angular, Flutter, SQL Server and Azure. I have worked on asset management systems, RFID integrations, AI assistants for enterprises and event technology platforms for large events.';
 
 window.EXPERIENCE = [
   {
     id: 'infome', initials: 'IM', current: true,
     role: '.NET Software Engineer', company: 'Infome Technologies LLC', location: 'Kochi, India',
-    period: 'February 2025 – Present', short: 'Feb 2025 – Present',
-    summary: 'Full-Stack .NET Developer contributing to enterprise asset management platforms, AI solutions, IoT integrations, and event technology systems. Focused on building scalable backend services, cross-platform applications, and intelligent enterprise solutions.',
+    period: 'February 2025 to Present', short: 'Feb 2025 to Present',
+    summary: 'I work on enterprise asset management platforms, AI features, IoT integrations and event technology systems. Most of it is backend services and cross-platform apps.',
     highlights: [
-      'Developed secure REST APIs using ASP.NET Core (5/8/9/10) Web API for enterprise asset management, AI solutions, and event management platforms supporting production enterprise applications.',
-      'Built and maintained Angular front-end modules integrated with .NET Core REST APIs, delivering responsive, data-driven enterprise dashboards.',
-      'Established Clean Architecture, Repository Pattern, Docker, and Azure DevOps CI/CD pipelines, automating deployments for ASP.NET Core Web APIs and Angular production applications.',
-      'Developed AI-powered features using Google Gemini AI, LLMs, and RAG to automate information retrieval and improve business productivity.',
-      'Integrated RFID devices, QR scanners, IoT hardware, and .NET Worker Services, enabling real-time asset and event tracking.'
+      'Built secure REST APIs with ASP.NET Core Web API (versions 5, 8, 9 and 10) for asset management, AI and event management platforms that run in production.',
+      'Built and maintained Angular modules that call the .NET Core REST APIs, including responsive, data-driven enterprise dashboards.',
+      'Set up Clean Architecture, the Repository pattern, Docker and Azure DevOps CI/CD pipelines, which automate deployments of the ASP.NET Core APIs and Angular apps.',
+      'Built AI features with Google Gemini AI, LLMs and RAG that retrieve information automatically.',
+      'Connected RFID devices, QR scanners and other IoT hardware to the backend through .NET Worker Services, so assets and events are tracked in real time.'
     ],
     more: [
-      'Worked with SQL Server, PostgreSQL, SQLite and MongoDB for structured and unstructured data storage, querying, and performance optimization across multiple enterprise applications.',
-      'Built cross-platform Flutter and .NET applications for Windows and Android, delivering enterprise mobile and desktop solutions.',
-      'Implemented JWT and OAuth-based authentication/authorization with role-based access control (RBAC) to secure REST APIs across multiple projects.',
-      'Collaborated with cross-functional teams in an Agile/Scrum environment (sprint planning, daily stand-ups, and code reviews) on enterprise architecture, cloud deployment, AI integration, API documentation, debugging, and monitoring across multiple production projects.',
-      'Used Git for version control and collaborative development across all projects.'
+      'Stored and queried structured and unstructured data in SQL Server, PostgreSQL, SQLite and MongoDB, and tuned performance across several enterprise applications.',
+      'Built Flutter and .NET applications for Windows and Android, covering both mobile and desktop.',
+      'Added JWT and OAuth authentication and role-based access control (RBAC) to secure the REST APIs on several projects.',
+      'Worked with cross-functional teams in an Agile/Scrum setup: sprint planning, daily stand-ups and code reviews. The work covered enterprise architecture, cloud deployment, AI integration, API documentation, debugging and monitoring on several production projects.',
+      'Used Git for version control on all projects.'
     ],
     tech: ['ASP.NET Core', 'C#', 'Angular', 'SQL Server', 'PostgreSQL', 'MongoDB', 'Flutter', 'Docker', 'Azure DevOps', 'Google Gemini AI', 'RFID', 'JWT / OAuth']
   },
   {
     id: 'freelance', initials: 'FP', current: false,
     role: 'ASP.NET Core Full Stack Developer', company: 'Freelance Projects', location: 'Saudi Arabia',
-    period: 'November 2024 – 2025', short: 'Nov 2024 – 2025',
-    summary: 'Delivered custom ASP.NET Core web applications and REST APIs for Saudi Arabian clients, meeting diverse business requirements.',
+    period: 'November 2024 to 2025', short: 'Nov 2024 to 2025',
+    summary: 'Built custom ASP.NET Core web applications and REST APIs for clients in Saudi Arabia.',
     highlights: [
-      'Designed automated PDF reporting solutions using FastReport Community Edition, reducing manual report generation.',
-      'Configured and maintained IIS-hosted ASP.NET Core applications for reliable production deployments.',
-      'Designed and optimized MySQL databases to support efficient data storage and query performance.',
-      'Tested and validated REST APIs using Postman to ensure functionality, performance, and data integrity before deployment.'
+      'Built automated PDF reports with FastReport Community Edition, which cut down on manual report generation.',
+      'Configured and maintained the IIS servers that host the ASP.NET Core applications in production.',
+      'Designed and optimised MySQL databases for storage and query performance.',
+      'Tested the REST APIs in Postman for functionality, performance and data integrity before deployment.'
     ],
     more: [],
     tech: ['ASP.NET Core', 'REST APIs', 'FastReport', 'IIS', 'MySQL', 'Postman']
@@ -45,12 +45,12 @@ window.EXPERIENCE = [
   {
     id: 'aitrich', initials: 'AT', current: false,
     role: 'ASP.NET Core Full Stack Developer', company: 'Aitrich Technologies Pvt Ltd', location: 'Thrissur, India',
-    period: 'December 2023 – 2025', short: 'Dec 2023 – 2025',
-    summary: 'Developed and contributed to the creation of a Job Portal Application during my intern period at Aitrich Technologies.',
+    period: 'December 2023 to 2025', short: 'Dec 2023 to 2025',
+    summary: 'I helped build a Job Portal application during my internship at Aitrich Technologies.',
     highlights: [
-      'Contributed to the development of an ASP.NET Core Job Portal application using C#, SQL Server, HTML, CSS, and JavaScript.',
-      'Participated in Agile sprint planning, daily stand-ups, testing, deployment, and SDLC activities to deliver project milestones.',
-      'Implemented backend modules and collaborated on code reviews and Git-based version control to maintain code quality.'
+      'Worked on the ASP.NET Core Job Portal with C#, SQL Server, HTML, CSS and JavaScript.',
+      'Took part in sprint planning, daily stand-ups, testing and deployment across the project\'s life cycle.',
+      'Wrote backend modules and joined code reviews, using Git for version control.'
     ],
     more: [],
     tech: ['C#', 'ASP.NET Core', 'SQL Server', 'HTML', 'CSS', 'JavaScript', 'Git', 'Agile']
@@ -58,8 +58,8 @@ window.EXPERIENCE = [
 ];
 
 window.EDUCATION = [
-  { icon: 'fa-graduation-cap', title: 'Bachelor of Computer Applications (BCA)', org: 'Bharathidasan University (BDU)', period: 'July 2023 – 2026' },
-  { icon: 'fa-laptop-code', title: 'ASP.NET Core Full-Stack Web Development', org: 'Aitrich Technologies', period: 'December 2023 – 2025' }
+  { icon: 'fa-graduation-cap', title: 'Bachelor of Computer Applications (BCA)', org: 'Bharathidasan University (BDU)', period: 'July 2023 to 2026' },
+  { icon: 'fa-laptop-code', title: 'ASP.NET Core Full-Stack Web Development', org: 'Aitrich Technologies', period: 'December 2023 to 2025' }
 ];
 
 (function () {

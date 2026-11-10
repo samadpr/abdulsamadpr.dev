@@ -237,7 +237,7 @@
       })
       .catch(function () {
         var subj = encodeURIComponent(data.get('subject') || 'Portfolio enquiry');
-        var body = encodeURIComponent((data.get('message') || '') + '\n\n– ' + (data.get('name') || ''));
+        var body = encodeURIComponent((data.get('message') || '') + '\n\n' + (data.get('name') || ''));
         status.className = 'form-status err';
         status.innerHTML = 'Could not send right now. Please <a href="mailto:abdulsamadpr.dev@gmail.com?subject=' + subj + '&body=' + body + '">email me directly</a>.';
       })

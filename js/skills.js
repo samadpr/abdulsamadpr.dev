@@ -278,7 +278,7 @@
     meta.innerHTML = 'Showing <b>' + shown + '</b> of ' + SKILLS.length + ' skills';
     searchWrap.classList.toggle('has-value', !!state.q);
     var current = CATS.filter(function (c) { return c.id === state.cat; })[0];
-    grid.setAttribute('aria-label', current.label + ' – ' + shown + ' skills');
+    grid.setAttribute('aria-label', current.label + ': ' + shown + ' skills');
 
     // Explore / Show Less is only meaningful for the plain "All" view
     var canToggle = state.cat === 'all' && !searching && state.view === 'grid';
