@@ -50,21 +50,22 @@ html.theme-anim *, html.theme-anim *::before, html.theme-anim *::after {
 /* ==========================================================================
    NAVIGATION
    ========================================================================== */
-/* Header: clean and transparent at the top; on scroll a blurred panel fades in (opacity-only, so no jank).
-   The blur lives on ::before, not on .nav, so the fixed mobile menu is never trapped inside a containing block. */
-.nav { position: fixed; inset: 0 0 auto 0; z-index: 100; height: var(--nav-h); display: flex; align-items: center;
-  border-bottom: 1px solid transparent; transition: border-color var(--t-med) ease, box-shadow var(--t-med) ease; }
-.nav::before { content: ""; position: absolute; inset: 0; z-index: -1; background: var(--nav-bg); backdrop-filter: blur(18px) saturate(1.5); -webkit-backdrop-filter: blur(18px) saturate(1.5);
-  opacity: 0; transition: opacity var(--t-med) ease; }
-.nav.scrolled::before, .nav.menu-open::before { opacity: 1; }
-.nav.scrolled { border-bottom-color: var(--border); box-shadow: 0 8px 30px -18px rgb(0 0 0 / .45); }
+/* Header: transparent at the top. After scrolling it becomes a floating glass capsule that fades and settles in
+   (opacity + transform only, so nothing reflows). The capsule is ::before, so its blur never becomes the containing
+   block of the fixed mobile menu. The bar itself keeps its height, so every scroll offset stays valid. */
+.nav { position: fixed; inset: 0 0 auto 0; z-index: 100; height: var(--nav-h); display: flex; align-items: center; }
+.nav::before { content: ""; position: absolute; z-index: -1; top: 8px; bottom: 8px; left: max(8px, calc(50% - 620px)); right: max(8px, calc(50% - 620px));
+  border-radius: 20px; background: var(--nav-bg); border: 1px solid var(--border-strong);
+  box-shadow: var(--shadow), inset 0 1px 0 rgb(255 255 255 / .06); backdrop-filter: blur(18px) saturate(1.5); -webkit-backdrop-filter: blur(18px) saturate(1.5);
+  opacity: 0; transform: translateY(-8px) scale(.985); transition: opacity var(--t-med) ease, transform .5s var(--ease); }
+.nav.scrolled::before, .nav.menu-open::before { opacity: 1; transform: none; }
 .nav .container { display: flex; align-items: center; justify-content: space-between; gap: var(--sp-4); }
-.nav-links { position: relative; display: flex; align-items: center; gap: .15rem; }
-.nav-links a { position: relative; color: var(--text-muted); font-size: var(--fs-sm); font-weight: 500; padding: .5rem .7rem; border-radius: var(--r-sm); transition: color var(--t-fast); }
+.nav-links { position: relative; display: flex; align-items: center; gap: .2rem; }
+.nav-links a { position: relative; z-index: 1; color: var(--text-muted); font-size: var(--fs-sm); font-weight: 500; padding: .5rem .8rem; border-radius: 12px; transition: color var(--t-fast); }
 .nav-links a:hover { color: var(--text); text-decoration: none; }
 .nav-links a.active { color: var(--text); }
-/* single sliding underline, positioned by JS (desktop only) */
-.nav-ind { position: absolute; left: 0; bottom: 2px; height: 2px; width: 0; border-radius: 2px; background: var(--gradient); opacity: 0;
+/* one highlight pill that slides behind the active link, positioned by JS (desktop only) */
+.nav-ind { position: absolute; z-index: 0; left: 0; top: 0; bottom: 0; width: 0; border-radius: 12px; background: var(--accent-soft); box-shadow: inset 0 0 0 1px var(--accent-line); opacity: 0;
   transition: transform .45s var(--ease), width .45s var(--ease), opacity .3s; pointer-events: none; }
 .nav-ind.on { opacity: 1; }
 .nav-tools { display: flex; align-items: center; gap: .5rem; }
@@ -81,11 +82,12 @@ html.theme-anim *, html.theme-anim *::before, html.theme-anim *::after {
 
 @media (max-width: 1100px) {
   .menu-toggle { display: grid; }
-  .nav-links { position: fixed; inset: var(--nav-h) 0 auto 0; flex-direction: column; align-items: stretch; gap: 0; padding: var(--sp-3) 1rem var(--sp-5);
-    background: var(--surface-solid); border-bottom: 1px solid var(--border-strong); box-shadow: var(--shadow-lg);
+  .nav-links { position: fixed; inset: calc(var(--nav-h) - 2px) 8px auto 8px; flex-direction: column; align-items: stretch; gap: 0; padding: .4rem 1rem .8rem;
+    background: var(--surface-solid); border: 1px solid var(--border-strong); border-radius: 20px; box-shadow: var(--shadow-lg);
     transform: translateY(-12px); opacity: 0; visibility: hidden; transition: transform var(--t-med) var(--ease), opacity var(--t-fast), visibility var(--t-med); }
   .nav-links.open { transform: none; opacity: 1; visibility: visible; }
   .nav-links a { padding: .85rem .5rem; font-size: var(--fs-md); border-bottom: 1px solid var(--border); border-radius: 0; }
+  .nav-links a:last-of-type { border-bottom: 0; }
   .nav-ind { display: none; }
   .nav-links a.active { color: var(--accent); }
 }

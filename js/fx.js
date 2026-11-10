@@ -18,8 +18,8 @@
     var placeInd = function () {
       var a = navLinks.querySelector('a.active');
       if (!a || navLinks.offsetParent === null || window.getComputedStyle(ind).display === 'none') { if (ind.classList.contains('on')) ind.classList.remove('on'); return; }
-      ind.style.width = (a.offsetWidth - 20) + 'px';
-      ind.style.transform = 'translateX(' + (a.offsetLeft + 10) + 'px)';
+      ind.style.width = a.offsetWidth + 'px';
+      ind.style.transform = 'translateX(' + a.offsetLeft + 'px)';
       if (!ind.classList.contains('on')) ind.classList.add('on');
     };
     // ignore mutations on the indicator itself, otherwise updating it re-triggers this observer forever
