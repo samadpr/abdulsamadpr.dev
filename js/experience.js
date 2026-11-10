@@ -58,7 +58,7 @@ window.EXPERIENCE = [
 ];
 
 window.EDUCATION = [
-  { icon: 'fa-graduation-cap', title: 'Bachelor of Computer Applications (BCA)', period: 'July 2023 – 2026' },
+  { icon: 'fa-graduation-cap', title: 'Bachelor of Computer Applications (BCA)', org: 'Bharathidasan University (BDU)', period: 'July 2023 – 2026' },
   { icon: 'fa-laptop-code', title: 'ASP.NET Core Full-Stack Web Development', org: 'Aitrich Technologies', period: 'December 2023 – 2025' }
 ];
 
